@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--基础武器-->
+  <ThingDef ParentName="MYDE_AerocraftFramework_WeaponBase_XmlParent">
+    <defName>AFmech7missile</defName>
+    <label>Mech-7 Shock Missiles</label>
+    <description>A shock missile system which loads missile hulls with red mechband energy to shock the systems of organics and fry their power armor systems, unfortunately or fortunately able to fry mechanoid systems.</description>
+    <graphicData>
+      <texPath>AerocraftFramework/UniversalWeapon/BaseGun</texPath>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.77</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.45</AccuracyMedium>
+      <AccuracyLong>0.24</AccuracyLong>
+      <RangedWeapon_Cooldown>4.3</RangedWeapon_Cooldown>
+      <Mass>5</Mass>
+    </statBases>
+    <costList>
+      <Steel>20</Steel>
+      <Chemfuel>80</Chemfuel>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>mech7_missile</defaultProjectile>
+        <warmupTime>0.5</warmupTime>
+        <range>50.9</range>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <burstShotCount>2</burstShotCount>
+        <soundCast>RocketswarmLauncher_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <consumeFuelPerShot>1</consumeFuelPerShot>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="MYDE_AerocraftFramework_XmlParent">
+    <defName>AFshockmissilesecondary</defName>
+    <label>Missile</label>
+    <description>Missile</description>
+    <thingClass>MYDE_AerocraftFramework.Building_Aerocraft_AsWeapon</thingClass>
+    <uiIconPath>AerocraftFramework/RotorCraft_FourPropeller/MachineGun</uiIconPath>
+    <graphicData>
+      <texPath>AerocraftFramework/Nothing/Nothing</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <WorkToBuild>1000</WorkToBuild>
+      <Mass>5</Mass>
+      <Beauty>5</Beauty>
+      <!--这个是精准度-->
+      <ShootingAccuracyTurret>0.9</ShootingAccuracyTurret>
+    </statBases>
+    <size>(1,1)</size>
+    <comps>
+      <!--本体的渲染+阴影-->
+      <li Class="MYDE_AerocraftFramework.CompProperties_Base_Thing">
+        <!--是否渲染-->
+        <If_Draw_Base>False</If_Draw_Base>
+        <!--飞行的大小变化-->
+        <Draw_ScaleIncreaseFactor_WhenFlying>0.5</Draw_ScaleIncreaseFactor_WhenFlying>
+        <!--是否制作阴影+阴影最大最下长度+阴影角度-->
+        <If_NeedDrawAllShadow>True</If_NeedDrawAllShadow>
+      </li>
+      <!--主武器渲染+阴影-->
+      <li Class="MYDE_AerocraftFramework.CompProperties_Base_Weapon">
+        <!--枪械-->
+        <WeaponDef>MYDE_AF_RotorCraft_FourPropeller_ExtraWeapon_Rocket_Weapon</WeaponDef>
+        <!--是否渲染-->
+        <If_Draw_Gun>True</If_Draw_Gun>
+        <!--枪的图层高度-->
+        <Draw_Gun_Scale>1</Draw_Gun_Scale>
+        <Draw_Gun_ExtraAltitudeLayerNum>0.3</Draw_Gun_ExtraAltitudeLayerNum>
+        <!--是否制作枪械阴影+大小+图层+透明度-->
+        <If_DrawShadow_Gun>true</If_DrawShadow_Gun>
+        <Draw_Shadow_Gun_Scale>0.75</Draw_Shadow_Gun_Scale>
+        <Draw_Shadow_Gun_ExtraAltitudeLayerNum>-0.6</Draw_Shadow_Gun_ExtraAltitudeLayerNum>
+        <Draw_Shadow_Gun_Transparency>0.5</Draw_Shadow_Gun_Transparency>
+      </li>
+      <!--替换武器-->
+      <li Class="MYDE_AerocraftFramework.CompProperties_ReplaceCurrentWeapon">
+        <If_CanShowGizmosToReplace>True</If_CanShowGizmosToReplace>
+      </li>
+    </comps>
+    <building>
+      <deconstructible>false</deconstructible>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>MYDE_AF_RotorCraft_FourPropeller_ExtraWeapon_Rocket_Weapon</defName>
+    <label>Rocket</label>
+    <description>Rocket</description>
+    <graphicData>
+      <texPath>AerocraftFramework/RotorCraft_FourPropeller/Rocket</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>mech7_missile</defaultProjectile>
+        <warmupTime>0.5</warmupTime>
+        <range>50.9</range>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <burstShotCount>2</burstShotCount>
+        <soundCast>RocketswarmLauncher_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <consumeFuelPerShot>1</consumeFuelPerShot>
+      </li>
+    </verbs>
+  </ThingDef>
+</Defs>

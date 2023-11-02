@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>CVN Mechanoid Combined Arms Warfare</name>
+  <author>ShunTheWitch</author>
+  <url>https://steamcommunity.com/sharedfiles/filedetails/?id=3065118483</url>
+  <description>Mechanoid Nval Vessels</description>
+  <packageId>ShunTheWitch.CVNmechanoidcombinedwarfare</packageId>
+  <supportedVersions>
+    <li>1.4</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+      <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2009463077</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>SmashPhil.VehicleFramework</packageId>
+      <displayName>Vehicle Framework</displayName>
+      <downloadUrl>https://github.com/SmashPhil/Vehicles/releases/latest</downloadUrl>
+      <steamWorkshopUrl />
+    </li>
+	<li>
+		<packageId>Ludeon.RimWorld.Biotech</packageId>
+		<displayName>RimWorld - Biotech</displayName>
+		<steamWorkshopUrl>steam://https://store.steampowered.com/app/1826140/RimWorld__Biotech//</steamWorkshopUrl>
+	</li>
+    <li>
+      <packageId>ShunTheWitch.CVNmechanoidwarfarecore</packageId>
+      <displayName>CVN Mechanoid Warfare Core</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3047564391</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Biotech</li><!-- Necessary. -->
+    <li>brrainz.harmony</li>
+    <li>SmashPhil.VehicleFramework</li>
+<li>ShunTheWitch.CVNmechanoidwarfarecore</li>
+  </loadAfter>
+</ModMetaData>
