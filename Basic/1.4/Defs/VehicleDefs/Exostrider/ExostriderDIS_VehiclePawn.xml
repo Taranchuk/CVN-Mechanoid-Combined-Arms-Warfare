@@ -2,8 +2,8 @@
 
 <Defs>	
 	<Vehicles.VehicleDef ParentName="BaseVehiclePawn">
-		<defName>CVN_ExostriderA</defName>
-		<label>Exostrider Railgun</label>
+		<defName>CVN_ExostriderB</defName>
+		<label>Exostrider Disruptor</label>
 		<description>The Might Amphibious Walker was made material from blueprints lost from old internet archives unfortunately for all life, mechanoids found these blueprints and interprited them by their own designs, causing a drastic shift from an ICBM platform to a mobile carrier that alone with it's six SSM Rapture launchers and fabricators, Two charge autocannons, and heavy AA cannon has been seen to sweep across entire urbworlds unopposed, The Migth houses a build in shield generator while only marginally stronger than those fielded by Centurions is unusually resistant to emp pulses, while also being itself immune to such, additionally being resistant to explosive force, however it is due to the need to constantly keep the reactor cooled weak to heat based weaponry.</description>
 		
 		<graphicData>
@@ -18,7 +18,7 @@
 
 		<fillPercent>1</fillPercent>
 		
-		<buildDef>CVN_ExostriderA_blueprint</buildDef>
+		<buildDef>CVN_ExostriderB_blueprint</buildDef>
 		
 		<size>(4, 10)</size>
 		
@@ -407,10 +407,10 @@
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
-						<turretDef>cvnexorailgun</turretDef>
+						<turretDef>cvnexodisruption</turretDef>
 						
 						<renderProperties>
-							<north>(0.5, 0)</north>
+							<north>(0.5, -0.8)</north>
 							<south>(0, 2)</south>
 							<east>(-1, 2)</east>
 						</renderProperties>

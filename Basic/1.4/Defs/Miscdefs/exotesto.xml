@@ -101,7 +101,7 @@
 			<shaderType>MoteGlow</shaderType>
 		</graphicData>
 		<projectile>
-			<damageAmountBase>1</damageAmountBase>
+			<damageAmountBase>0.1</damageAmountBase>
 			<damageDef>cvnmoleculardmg</damageDef>
 			<speed>95</speed>
 		</projectile>
@@ -110,8 +110,8 @@
 		<minDistanceToAffect>1.9</minDistanceToAffect>
 		<drawOffscreen>true</drawOffscreen>
 		<lifeTimeDuration>120</lifeTimeDuration>
-		<widthScaleFactor>2</widthScaleFactor>
-		<heightScaleFactor>1</heightScaleFactor>
+		<widthScaleFactor>3</widthScaleFactor>
+		<heightScaleFactor>2</heightScaleFactor>
 		<startingPositionOffset>(0,0,-1)</startingPositionOffset>
 		<totalSizeScale>1</totalSizeScale>
 		<tickFrameRate>2</tickFrameRate>
@@ -120,5 +120,6 @@
 		<dealsDamageOnce>false</dealsDamageOnce>
 		<disableVanillaDamageMethod>true</disableVanillaDamageMethod>
 		<stopWhenHit>false</stopWhenHit>
+		<debugMode>true</debugMode>
 	</VFECore.ExpandableProjectileDef>
 </Defs>

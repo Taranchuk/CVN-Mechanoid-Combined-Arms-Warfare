@@ -5,7 +5,7 @@
 		<defName>cvnexorailgun</defName>
 		<label>Exostrider Railgun</label>
 		<description>S</description>
-		<projectile>Bullet_ChargeLance</projectile>
+		<projectile>exorailgunshot</projectile>
 		<turretType>Rotatable</turretType>
 		<shotSound>ShotExorailgun</shotSound>
 		<magazineCapacity>1</magazineCapacity>

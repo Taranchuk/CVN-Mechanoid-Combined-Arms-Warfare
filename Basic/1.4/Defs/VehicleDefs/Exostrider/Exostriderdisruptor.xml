@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<Defs>
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>cvnexodisruption</defName>
+		<label>Exostrider Railgun</label>
+		<description>S</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>ShotExorailgun</shotSound>
+		
+		<projectile>CVNmoleculardestabalizationwave</projectile>
+		<reloadTimer>10.5</reloadTimer>
+		<warmUpTimer>0.4</warmUpTimer>
+		
+		<magazineCapacity>1</magazineCapacity>
+		<genericAmmo>true</genericAmmo>
+		<chargePerAmmoCount>5</chargePerAmmoCount>
+		
+		<hitFlags>IntendedTarget</hitFlags>
+		
+		<autoSnapTargeting>false</autoSnapTargeting>
+		<rotationSpeed>2.95</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset>
+		
+		<minRange>0</minRange>
+		<maxRange>400.9</maxRange>
+		
+		<recoil>
+					<distanceTotal>0.8</distanceTotal>
+					<distancePerTick>0.3</distancePerTick>
+					<speedMultiplierPostRecoil>0.15</speedMultiplierPostRecoil>
+		</recoil>
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>5</ticksBetweenShots>
+				<ticksBetweenBursts>5</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>UI/Gizmos/FireRate_Single</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+            <texPath>Things/Vehicles/Exostrider/ExoStryder_Cannon</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+			<shaderType>Cutout</shaderType> <!-- barrel graphic doesn't need masking -->
+			<drawSize>(4, 4)</drawSize>
+		</graphicData>
+		
+		<graphics>
+			<li>
+				<recoil>
+					<distanceTotal>0.8</distanceTotal>
+					<distancePerTick>0.3</distancePerTick>
+					<speedMultiplierPostRecoil>0.15</speedMultiplierPostRecoil>
+				</recoil>
+				<graphicData>
+            <texPath>Things/Vehicles/Exostrider/ExoStryder_Recoil</texPath>
+            <graphicClass>Vehicles.Graphic_Turret</graphicClass>
+            <shaderType>CutoutComplexPattern</shaderType>
+            <drawSize>(6, 6)</drawSize>
+					<layer>1</layer>
+				</graphicData>
+			</li>
+		</graphics>
+		
+		<ammunition>
+			<thingDefs>
+				<li>CVNAmmoBluestandard</li>
+			</thingDefs>
+		</ammunition>
+	</Vehicles.VehicleTurretDef>
+</Defs>
