@@ -4,7 +4,7 @@
 	<VFECore.ExpandableProjectileDef ParentName="BaseBullet">
         <defName>mechcullblade</defName>
         <label>scythe sweep</label>
-        <thingClass>VFECore.ExpandableProjectile</thingClass>
+        <thingClass>VFECore.ExpandableBullet</thingClass>
         <graphicData>
             <texPath>Things/projectiles/cullingstart</texPath>
             <texPathFadeOut>Things/projectiles/cullingend</texPathFadeOut>
@@ -21,14 +21,16 @@
         <lifeTimeDuration>50</lifeTimeDuration>
         <widthScaleFactor>2</widthScaleFactor>
         <heightScaleFactor>1</heightScaleFactor>
+		<arcSize>20</arcSize>
         <startingPositionOffset>(0, 0, -1)</startingPositionOffset>
         <totalSizeScale>1.0</totalSizeScale>
         <tickFrameRate>1</tickFrameRate>
         <finalTickFrameRate>10</finalTickFrameRate>
         <tickDamageRate>1</tickDamageRate>
         <dealsDamageOnce>true</dealsDamageOnce>
-        <minDistanceToAffect>0</minDistanceToAffect>
+        <minDistanceToAffect>5</minDistanceToAffect>
 		<stopWhenHit>false</stopWhenHit>
+		<debugMode>true</debugMode>
     </VFECore.ExpandableProjectileDef>
 
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
@@ -65,8 +67,8 @@
 		<fireModes>
 			<li>
 				<shotsPerBurst>1</shotsPerBurst>
-				<ticksBetweenShots>5</ticksBetweenShots>
-				<ticksBetweenBursts>5</ticksBetweenBursts>
+				<ticksBetweenShots>50</ticksBetweenShots>
+				<ticksBetweenBursts>50</ticksBetweenBursts>
 				<label>Burst</label>
 				<texPath>UI/Gizmos/FireRate_Single</texPath>
 			</li>
