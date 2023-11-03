@@ -20,6 +20,7 @@
 		<projectileOffset>1</projectileOffset>
 		
 		<minRange>20</minRange>
+		<maxRange>400.9</maxRange>
 			
 			<recoil>
 			<distanceTotal>0.2</distanceTotal>

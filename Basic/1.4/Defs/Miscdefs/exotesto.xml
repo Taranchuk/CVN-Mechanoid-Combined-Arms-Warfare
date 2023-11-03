@@ -1,29 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<HediffDef>
-		<defName>cvnlivingbomb</defName>
-		<label>Molecular Instability</label>
-		<description>This unit is disrupted at a molecular level if they die they will explode.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<maxSeverity>1.0</maxSeverity>
-		<isBad>true</isBad>		
-		<comps>
-			<li Class="AnimalBehaviours.HediffCompProperties_Exploder">
-				<explosionForce>5</explosionForce>
-				<damageDef>Bomb</damageDef>
-			</li>
-		</comps>
-	</HediffDef>
+
 	<VFECore.ExpandableProjectileDef ParentName="BaseBullet">
 		<defName>exorailgunshot</defName>
 		<label>gauss rifle sabot</label>
 		<projectile>
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>12</damageAmountBase>
-			<armorPenetrationBase>0.50</armorPenetrationBase>
-			<stoppingPower>1</stoppingPower>
-			<speed>250</speed>
+			<damageAmountBase>55</damageAmountBase>
+			<armorPenetrationBase>2.00</armorPenetrationBase>
+			<stoppingPower>2</stoppingPower>
+			<speed>350</speed>
 		</projectile>
 		<thingClass>VFECore.GaussProjectile</thingClass>
 		<graphicData>
@@ -31,16 +17,16 @@
 			<texPathFadeOut>Things/projectiles/Proj_RailgunFadeOut</texPathFadeOut>
 		</graphicData>
 		<reachMaxRangeAlways>true</reachMaxRangeAlways>
-		<minDistanceToAffect>1</minDistanceToAffect>
+		<minDistanceToAffect>0</minDistanceToAffect>
 		<drawOffscreen>true</drawOffscreen>
-		<lifeTimeDuration>120</lifeTimeDuration>
-		<widthScaleFactor>0.20</widthScaleFactor>
+		<lifeTimeDuration>190</lifeTimeDuration>
+		<widthScaleFactor>0.10</widthScaleFactor>
 		<heightScaleFactor>1</heightScaleFactor>
 		<startingPositionOffset>(0,0,-1)</startingPositionOffset>
-		<totalSizeScale>0.8</totalSizeScale>
+		<totalSizeScale>1.0</totalSizeScale>
 		<tickFrameRate>2</tickFrameRate>
 		<finalTickFrameRate>2</finalTickFrameRate>
-		<tickDamageRate>2</tickDamageRate>
+		<tickDamageRate>8</tickDamageRate>
 		<dealsDamageOnce>false</dealsDamageOnce>
 		<disableVanillaDamageMethod>true</disableVanillaDamageMethod>
 		<stopWhenHit>false</stopWhenHit>
@@ -67,7 +53,24 @@
 		</stopWhenHitAt>
 	</VFECore.ExpandableProjectileDef>
 
-
+	<HediffDef>
+		<defName>cvnlivingbomb</defName>
+		<label>Molecular Instability</label>
+		<description>This unit is disrupted at a molecular level if they die they will explode.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>true</isBad>		
+		<comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>900</disappearsAfterTicks>
+      </li>
+			<li Class="AnimalBehaviours.HediffCompProperties_Exploder">
+				<explosionForce>5</explosionForce>
+				<damageDef>Bomb</damageDef>
+			</li>
+		</comps>
+	</HediffDef>
 
   <DamageDef>
     <defName>cvnmoleculardmg</defName>
@@ -101,17 +104,18 @@
 			<shaderType>MoteGlow</shaderType>
 		</graphicData>
 		<projectile>
+			<damageDef>Bullet</damageDef>
 			<damageAmountBase>0.1</damageAmountBase>
-			<damageDef>cvnmoleculardmg</damageDef>
-			<speed>95</speed>
+			<speed>25</speed>
 		</projectile>
 
 		<reachMaxRangeAlways>true</reachMaxRangeAlways>
 		<minDistanceToAffect>1.9</minDistanceToAffect>
 		<drawOffscreen>true</drawOffscreen>
-		<lifeTimeDuration>120</lifeTimeDuration>
-		<widthScaleFactor>3</widthScaleFactor>
-		<heightScaleFactor>2</heightScaleFactor>
+		<lifeTimeDuration>200</lifeTimeDuration>
+		<widthScaleFactor>1.5</widthScaleFactor>
+		<heightScaleFactor>1</heightScaleFactor>
+		<arcSize>30</arcSize>
 		<startingPositionOffset>(0,0,-1)</startingPositionOffset>
 		<totalSizeScale>1</totalSizeScale>
 		<tickFrameRate>2</tickFrameRate>

@@ -21,14 +21,14 @@
         <lifeTimeDuration>50</lifeTimeDuration>
         <widthScaleFactor>2</widthScaleFactor>
         <heightScaleFactor>1</heightScaleFactor>
-		<arcSize>20</arcSize>
+		<arcSize>10</arcSize>
         <startingPositionOffset>(0, 0, -1)</startingPositionOffset>
         <totalSizeScale>1.0</totalSizeScale>
         <tickFrameRate>1</tickFrameRate>
         <finalTickFrameRate>10</finalTickFrameRate>
         <tickDamageRate>1</tickDamageRate>
         <dealsDamageOnce>true</dealsDamageOnce>
-        <minDistanceToAffect>5</minDistanceToAffect>
+        <minDistanceToAffect>2</minDistanceToAffect>
 		<stopWhenHit>false</stopWhenHit>
 		<debugMode>true</debugMode>
     </VFECore.ExpandableProjectileDef>
