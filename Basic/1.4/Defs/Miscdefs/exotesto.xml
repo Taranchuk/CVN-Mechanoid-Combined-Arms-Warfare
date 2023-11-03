@@ -51,6 +51,7 @@
 			<li>Marble</li>
 			<li>SmoothedMarble</li>
 		</stopWhenHitAt>
+		<debugMode>true</debugMode>
 	</VFECore.ExpandableProjectileDef>
 
 	<HediffDef>
@@ -73,57 +74,62 @@
 	</HediffDef>
 
   <DamageDef>
-    <defName>cvnmoleculardmg</defName>
+    <defName>CVNmoleculardmg</defName>
     <label>Molecular destablization</label>
-    <workerClass>DamageWorker_Cut</workerClass>
-    <externalViolenceForMechanoids>true</externalViolenceForMechanoids>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
     <deathMessage>{0} has been torn apart at the molecular level.</deathMessage>
-    <harmsHealth>True</harmsHealth>
     <impactSoundType>MechBandShockwave</impactSoundType>
-    <defaultDamage>0.1</defaultDamage>
-    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
-    <defaultStoppingPower>9.5</defaultStoppingPower>
-    <defaultArmorPenetration>5.5</defaultArmorPenetration>
+    <defaultDamage>10</defaultDamage>
+    <defaultStoppingPower>1.5</defaultStoppingPower>
+    <defaultArmorPenetration>2.0</defaultArmorPenetration>
     <plantDamageFactor>1000</plantDamageFactor>
     <buildingDamageFactorImpassable>1000</buildingDamageFactorImpassable>
     <buildingDamageFactorPassable>1000</buildingDamageFactorPassable>
-    <stabChanceOfForcedInternal>0.6</stabChanceOfForcedInternal>
-    <overkillPctToDestroyPart>0.4~1.0</overkillPctToDestroyPart>
-    <corpseDamageFactor>0</corpseDamageFactor>
-    <combatLogRules>Damage_Flame</combatLogRules>
-    <hediff>cvnlivingbomb</hediff>
+    <hediff>Burn</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <isRanged>true</isRanged>
+    <additionalHediffs>
+      <li>
+        <hediff>cvnlivingbomb</hediff>
+        <severityPerDamageDealt>1</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
   </DamageDef>
+
+
 
 	<VFECore.ExpandableProjectileDef ParentName="BaseBullet">
 		<defName>CVNmoleculardestabalizationwave</defName>
 		<label>Disruption Wave</label>
+		<projectile>
+			<damageDef>CVNmoleculardmg</damageDef>
+			<damageAmountBase>4</damageAmountBase>
+			<armorPenetrationBase>2.00</armorPenetrationBase>
+			<stoppingPower>2</stoppingPower>
+			<speed>60</speed>
+		</projectile>
 		<thingClass>VFECore.GaussProjectile</thingClass>
 		<graphicData>
 			<texPath>Things/projectiles/molecularde/molecular</texPath>
-			<texPathFadeOut>Things/projecitles/molecularde/molecularFadeOut</texPathFadeOut>
-			<shaderType>MoteGlow</shaderType>
+			<texPathFadeOut>Things/projectiles/molecularde/molecularFadeOut</texPathFadeOut>
 		</graphicData>
-		<projectile>
-			<damageDef>Bullet</damageDef>
-			<damageAmountBase>0.1</damageAmountBase>
-			<speed>25</speed>
-		</projectile>
-
 		<reachMaxRangeAlways>true</reachMaxRangeAlways>
 		<minDistanceToAffect>1.9</minDistanceToAffect>
 		<drawOffscreen>true</drawOffscreen>
 		<lifeTimeDuration>200</lifeTimeDuration>
-		<widthScaleFactor>1.5</widthScaleFactor>
+		<widthScaleFactor>1</widthScaleFactor>
 		<heightScaleFactor>1</heightScaleFactor>
 		<arcSize>30</arcSize>
 		<startingPositionOffset>(0,0,-1)</startingPositionOffset>
 		<totalSizeScale>1</totalSizeScale>
 		<tickFrameRate>2</tickFrameRate>
 		<finalTickFrameRate>2</finalTickFrameRate>
-		<tickDamageRate>2</tickDamageRate>
+		<tickDamageRate>8</tickDamageRate>
 		<dealsDamageOnce>false</dealsDamageOnce>
 		<disableVanillaDamageMethod>true</disableVanillaDamageMethod>
 		<stopWhenHit>false</stopWhenHit>
 		<debugMode>true</debugMode>
 	</VFECore.ExpandableProjectileDef>
+
 </Defs>
