@@ -2,7 +2,7 @@
 
 <Defs>	
 	<Vehicles.VehicleDef ParentName="BaseVehiclePawn">
-		<defName>CVN_ExostriderB</defName>
+		<defName>CVN_ExostriderMINI</defName>
 		<label>Exostrider Disruptor</label>
 		<description>The Might Amphibious Walker was made material from blueprints lost from old internet archives unfortunately for all life, mechanoids found these blueprints and interprited them by their own designs, causing a drastic shift from an ICBM platform to a mobile carrier that alone with it's six SSM Rapture launchers and fabricators, Two charge autocannons, and heavy AA cannon has been seen to sweep across entire urbworlds unopposed, The Migth houses a build in shield generator while only marginally stronger than those fielded by Centurions is unusually resistant to emp pulses, while also being itself immune to such, additionally being resistant to explosive force, however it is due to the need to constantly keep the reactor cooled weak to heat based weaponry.</description>
 		
@@ -10,7 +10,7 @@
 			<texPath>Things/Vehicles/Exostrider/Exostryder</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
-			<drawSize>(9, 12)</drawSize>
+			<drawSize>(4, 6)</drawSize>
 			<color>(155, 155, 155)</color>
 			<colorTwo>(65, 75, 80)</colorTwo>
 			<colorThree>(45, 50, 45)</colorThree>
@@ -18,9 +18,9 @@
 
 		<fillPercent>1</fillPercent>
 		
-		<buildDef>CVN_ExostriderB_blueprint</buildDef>
+		<buildDef>CVN_ExostriderMINI_blueprint</buildDef>
 		
-		<size>(4, 10)</size>
+		<size>(2, 5)</size>
 		
 		<vehicleCategory>Combat</vehicleCategory>
 		<techLevel>Industrial</techLevel>
@@ -407,12 +407,12 @@
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
-						<turretDef>cvnexodisruption</turretDef>
+						<turretDef>cvnexominirockets</turretDef>
 						
 						<renderProperties>
 							<north>(0, 0)</north>
-							<south>(0, 2)</south>
-							<east>(-1, 2)</east>
+							<south>(0, 1)</south>
+							<east>(-0.8, 1)</east>
 						</renderProperties>
 						
 						<gizmoLabel>Main Turret</gizmoLabel>

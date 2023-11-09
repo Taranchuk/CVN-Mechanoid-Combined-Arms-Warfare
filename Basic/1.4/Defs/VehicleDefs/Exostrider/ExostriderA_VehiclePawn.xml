@@ -410,7 +410,7 @@
 						<turretDef>cvnexorailgun</turretDef>
 						
 						<renderProperties>
-							<north>(0.5, 0)</north>
+							<north>(0, 0)</north>
 							<south>(0, 2)</south>
 							<east>(-1, 2)</east>
 						</renderProperties>

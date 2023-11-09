@@ -26,12 +26,11 @@
 		<minRange>0</minRange>
 		<maxRange>30.9</maxRange>
 		
-		<recoil>
-					<distanceTotal>0.8</distanceTotal>
-					<distancePerTick>0.3</distancePerTick>
-					<speedMultiplierPostRecoil>0.15</speedMultiplierPostRecoil>
-		</recoil>
-
+	<modExtensions>
+<li Class = "Vehicles.VehicleDamageMultiplierDefModExtension">
+  <multiplier>30</multiplier>
+</li>
+	</modExtensions>
 		<fireModes>
 			<li>
 				<shotsPerBurst>1</shotsPerBurst>
@@ -43,28 +42,12 @@
 		</fireModes>
 
 		<graphicData>
-            <texPath>Things/Vehicles/Exostrider/ExoStryder_Cannon</texPath>
-			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
-			<shaderType>Cutout</shaderType> <!-- barrel graphic doesn't need masking -->
-			<drawSize>(4, 4)</drawSize>
+             				<texPath>Things/Vehicles/Exostrider/ExoStryder_Cannon2</texPath>
+					<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+					<shaderType>CutoutComplexPattern</shaderType>
+					<drawSize>(6, 6)</drawSize>
 		</graphicData>
 		
-		<graphics>
-			<li>
-				<recoil>
-					<distanceTotal>0.8</distanceTotal>
-					<distancePerTick>0.3</distancePerTick>
-					<speedMultiplierPostRecoil>0.15</speedMultiplierPostRecoil>
-				</recoil>
-				<graphicData>
-            <texPath>Things/Vehicles/Exostrider/ExoStryder_Recoil</texPath>
-            <graphicClass>Vehicles.Graphic_Turret</graphicClass>
-            <shaderType>CutoutComplexPattern</shaderType>
-            <drawSize>(6, 6)</drawSize>
-					<layer>1</layer>
-				</graphicData>
-			</li>
-		</graphics>
 		
 		<ammunition>
 			<thingDefs>

@@ -6,12 +6,12 @@
 		<label>gauss rifle sabot</label>
 		<projectile>
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>55</damageAmountBase>
+			<damageAmountBase>25</damageAmountBase>
 			<armorPenetrationBase>2.00</armorPenetrationBase>
 			<stoppingPower>2</stoppingPower>
 			<speed>350</speed>
 		</projectile>
-		<thingClass>VFECore.GaussProjectile</thingClass>
+		<thingClass>VFECore.ExpandableBullet</thingClass>
 		<graphicData>
 			<texPath>Things/projectiles/Proj_RailgunFadeIn</texPath>
 			<texPathFadeOut>Things/projectiles/Proj_RailgunFadeOut</texPathFadeOut>
@@ -26,7 +26,7 @@
 		<totalSizeScale>1.0</totalSizeScale>
 		<tickFrameRate>2</tickFrameRate>
 		<finalTickFrameRate>2</finalTickFrameRate>
-		<tickDamageRate>8</tickDamageRate>
+		<tickDamageRate>10</tickDamageRate>
 		<dealsDamageOnce>false</dealsDamageOnce>
 		<disableVanillaDamageMethod>true</disableVanillaDamageMethod>
 		<stopWhenHit>false</stopWhenHit>
@@ -51,7 +51,6 @@
 			<li>Marble</li>
 			<li>SmoothedMarble</li>
 		</stopWhenHitAt>
-		<debugMode>true</debugMode>
 	</VFECore.ExpandableProjectileDef>
 
 	<HediffDef>
@@ -109,7 +108,7 @@
 			<stoppingPower>2</stoppingPower>
 			<speed>60</speed>
 		</projectile>
-		<thingClass>VFECore.GaussProjectile</thingClass>
+		<thingClass>VFECore.ExpandableBullet</thingClass>
 		<graphicData>
 			<texPath>Things/projectiles/molecularde/molecular</texPath>
 			<texPathFadeOut>Things/projectiles/molecularde/molecularFadeOut</texPathFadeOut>
@@ -118,18 +117,57 @@
 		<minDistanceToAffect>1.9</minDistanceToAffect>
 		<drawOffscreen>true</drawOffscreen>
 		<lifeTimeDuration>200</lifeTimeDuration>
-		<widthScaleFactor>1</widthScaleFactor>
+		<widthScaleFactor>0.8</widthScaleFactor>
 		<heightScaleFactor>1</heightScaleFactor>
-		<arcSize>30</arcSize>
+		<arcSize>60</arcSize>
 		<startingPositionOffset>(0,0,-1)</startingPositionOffset>
 		<totalSizeScale>1</totalSizeScale>
 		<tickFrameRate>2</tickFrameRate>
 		<finalTickFrameRate>2</finalTickFrameRate>
-		<tickDamageRate>8</tickDamageRate>
-		<dealsDamageOnce>false</dealsDamageOnce>
+		<tickDamageRate>20</tickDamageRate>
+		<dealsDamageOnce>true</dealsDamageOnce>
 		<disableVanillaDamageMethod>true</disableVanillaDamageMethod>
 		<stopWhenHit>false</stopWhenHit>
 		<debugMode>true</debugMode>
 	</VFECore.ExpandableProjectileDef>
 
+  <ThingDef ParentName="BaseBullet">
+    <defName>shockandballlightning</defName>
+    <label>Shock And Ball Lightning</label>
+    <graphicData>
+      <texPath>Things/projectiles/Proj._EnergyBall</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>(3, 3)</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <speed>60</speed>
+      <damageDef>MechElecShockwave</damageDef>
+      <!-- Use default damage from explosion def -->
+      <explosionRadius>4.1</explosionRadius>
+      <arcHeightFactor>5</arcHeightFactor>
+      <shadowSize>1.6</shadowSize>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>microflameshells</defName>
+    <label>exoflameshells</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(254,189,58)</color>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <speed>60</speed>
+      <damageDef>Flame</damageDef>
+      <!-- Use default damage from explosion def -->
+      <explosionRadius>3.1</explosionRadius>
+      <arcHeightFactor>50</arcHeightFactor>
+      <shadowSize>0.6</shadowSize>
+    </projectile>
+  </ThingDef>
 </Defs>
