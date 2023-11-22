@@ -4,15 +4,13 @@
 	<ThingDef ParentName="BaseBullet">
 		<defName>rapturemissile</defName>
 		<label>high-explosive shell</label>
-		<thingClass>Projectile_Explosive</thingClass>
-		
+		<thingClass>taranchuk_projectiletrails.RocketWithTrails</thingClass>
 		<graphicData>
 			<texPath>Things/projectiles/Missile_Proj</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>TransparentPostLight</shaderType>
 			<drawSize>(5, 5)</drawSize>
 		</graphicData>
-		
 		<projectile>
 			<damageDef>Bomb</damageDef>
 			<damageAmountBase>40</damageAmountBase>
@@ -23,9 +21,16 @@
 			<soundExplode>MortarBomb_Explode</soundExplode>
 			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
 			<soundAmbient>MortarRound_Ambient</soundAmbient>
+			<arcHeightFactor>100</arcHeightFactor>
 		</projectile>
+		<drawOffscreen>true</drawOffscreen>
+		<modExtensions>
+			<li Class="taranchuk_projectiletrails.RocketExtension">
+				<archHeightMultiplier>4</archHeightMultiplier>
+			</li>
+		</modExtensions>
 	</ThingDef>
-	
+
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
 		<defName>mightmissilelaun</defName>
 		<label>Rapture Missiles</label>
