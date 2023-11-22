@@ -24,6 +24,11 @@
 			<arcHeightFactor>100</arcHeightFactor>
 		</projectile>
 		<drawOffscreen>true</drawOffscreen>
+		<modExtensions>
+			<li Class="taranchuk_projectiletrails.RocketExtension">
+				<archHeightMultiplier>4</archHeightMultiplier>
+			</li>
+		</modExtensions>
 	</ThingDef>
 
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
