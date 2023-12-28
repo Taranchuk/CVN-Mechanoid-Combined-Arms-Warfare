@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ <GameConditionDef>
+    <defName>CVNFallout</defName>
+    <conditionClass>CVN_CustomGameCondition.GameCondition_CVNFallout</conditionClass>
+    <label>CVNFallout</label>
+    <description>. . .</description>
+    <letterText>. . .</letterText>
+    <letterDef>NegativeEvent</letterDef>
+    <canBePermanent>false</canBePermanent>
+    <natural>false</natural>
+    <modExtensions>
+        <li Class="CVN_CustomGameCondition.CVNGameConditionExtension">
+            <lightLevel>-1</lightLevel>
+            <hediffToApply>voidmiasmacrystal</hediffToApply>
+            <severityPerTrigger>0.05</severityPerTrigger> <!-- this is before tox resistance calculation -->
+		<soundDef>Miasmicwhisper</soundDef>
+		<soundInterval>1600</soundInterval>
+            <replacePlantWith>
+                <li>cryst</li>
+            </replacePlantWith>
+            <replaceCorpseWith>
+                <li>CommsConsole</li>
+            </replaceCorpseWith>
+            <amountOfThingToReplacePerTrigger>30</amountOfThingToReplacePerTrigger> <!-- if empty, default value is 3 -->
+            <thingsReplacement>
+                <li>
+                    <thingToReplace>EggBox</thingToReplace>
+                    <replacementThing>OrbitalTradeBeacon</replacementThing>        
+                </li>
+                <li>
+                    <thingToReplace>Granite</thingToReplace>
+                    <replacementThing>Slate</replacementThing>        
+                </li>
+                 <li>
+                    <terrainToReplace>Soil</terrainToReplace>
+                    <terrainDef>Ice</terrainDef>        
+                    <cellToReplacePerTrigger>2</cellToReplacePerTrigger>      
+                </li>
+            </thingsReplacement>
+            <skyColor>(105,0,255)</skyColor>
+            <shadowColor>(105,0,255)</shadowColor>
+            <overlayColor>(107, 3, 252)</overlayColor>
+            <overlayOpacity>1</overlayOpacity>
+        </li>
+    </modExtensions>
+  </GameConditionDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>cryst</defName>
+    <label>cryst</label>
+    <description>When it detects fire, this safety device pops and sprays a fire-retardant foam in a circular field around itself. Can also be triggered manually.</description>
+    <graphicData>
+      <texPath>Things/Building/Misc/FirefoamPopper</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.25, 0.35, 0.25)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <comps>
+
+    </comps>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+      <Mass>10</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>-8</Beauty>
+    </statBases>
+    <fillPercent>0.30</fillPercent>
+    <costList>
+      <Steel>75</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <specialDisplayRadius>9.9</specialDisplayRadius>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <pathCost>30</pathCost>
+    <passability>PassThroughOnly</passability>
+    <designationCategory>Misc</designationCategory>
+    <uiOrder>2070</uiOrder>
+    <rotatable>false</rotatable>
+    <designationHotKey>Misc7</designationHotKey>
+    <researchPrerequisites>
+      <li>Firefoam</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <building>
+      <mineableYieldWasteable>false</mineableYieldWasteable>
+    </building>
+  </ThingDef>
+
+</Defs>

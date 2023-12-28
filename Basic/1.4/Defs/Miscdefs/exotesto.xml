@@ -128,7 +128,7 @@
 		<dealsDamageOnce>true</dealsDamageOnce>
 		<disableVanillaDamageMethod>true</disableVanillaDamageMethod>
 		<stopWhenHit>false</stopWhenHit>
-		<debugMode>true</debugMode>
+		<wideAtStart>True</wideAtStart>
 	</VFECore.ExpandableProjectileDef>
 
   <ThingDef ParentName="BaseBullet">
@@ -143,11 +143,9 @@
     <thingClass>Projectile_Explosive</thingClass>
     <projectile>
       <speed>60</speed>
-      <damageDef>MechElecShockwave</damageDef>
+      <damageDef>MechElectwo</damageDef>
       <!-- Use default damage from explosion def -->
-      <explosionRadius>4.1</explosionRadius>
-      <arcHeightFactor>5</arcHeightFactor>
-      <shadowSize>1.6</shadowSize>
+      <explosionRadius>6.1</explosionRadius>
     </projectile>
   </ThingDef>
 
@@ -165,9 +163,11 @@
       <speed>60</speed>
       <damageDef>Flame</damageDef>
       <!-- Use default damage from explosion def -->
-      <explosionRadius>3.1</explosionRadius>
-      <arcHeightFactor>50</arcHeightFactor>
+      <explosionRadius>1.8</explosionRadius>
+      <arcHeightFactor>2</arcHeightFactor>
       <shadowSize>0.6</shadowSize>
     </projectile>
   </ThingDef>
+
+
 </Defs>
