@@ -18,13 +18,14 @@
 
 		<fillPercent>1</fillPercent>
 		
+
 		<buildDef>CVN_Mightboomer_blueprint</buildDef>
 		
 		<size>(4, 10)</size>
 		
 		<vehicleCategory>Combat</vehicleCategory>
 		<techLevel>Industrial</techLevel>
-		<vehicleType>Land</vehicleType>
+		<vehicleType>Universal</vehicleType>
 		
 		<statBases>
 			<ArmorRating_Blunt>0.48</ArmorRating_Blunt>
@@ -50,6 +51,7 @@
 		</race>
 		
 		<properties>
+		<iconTexPath>UI/Icons/DefaultBoatIcon</iconTexPath>
 			<customTerrainCosts AllowTerrainWithTag="Water" PathCost="1"/>
 			<customBiomeCosts>
 				<li>

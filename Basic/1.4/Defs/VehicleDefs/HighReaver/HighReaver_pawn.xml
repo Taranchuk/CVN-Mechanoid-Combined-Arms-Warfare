@@ -209,6 +209,12 @@
 		</components>
 		
 		<comps>	
+			<li Class="Vehicles.CompProperties_FueledTravel">
+				<fuelType>Chemfuel</fuelType>
+				<leakDef>Filth_Fuel</leakDef>
+				<fuelConsumptionRate>26.5</fuelConsumptionRate>
+				<fuelCapacity>300</fuelCapacity>
+			</li>
       <li Class="VehicleMechanitorControl.CompProperties_MechanitorControl">
 		<bandwidthGain>0</bandwidthGain>
 		<mechControlRange>0</mechControlRange>

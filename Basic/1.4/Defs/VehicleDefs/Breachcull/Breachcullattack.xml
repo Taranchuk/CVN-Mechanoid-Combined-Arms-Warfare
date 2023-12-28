@@ -2,19 +2,20 @@
 
 <Defs>
 	<VFECore.ExpandableProjectileDef ParentName="BaseBullet">
-        <defName>mechcullblade</defName>
-        <label>scythe sweep</label>
+        <defName>heatmechcullblade</defName>
+        <label>Heat Blade Swipe</label>
         <thingClass>VFECore.ExpandableBullet</thingClass>
         <graphicData>
-            <texPath>Things/projectiles/cullingstartone</texPath>
-            <texPathFadeOut>Things/projectiles/cullingendone</texPathFadeOut>
+            <texPath>Things/projectiles/cullingstart</texPath>
+            <texPathFadeOut>Things/projectiles/cullingend</texPathFadeOut>
             <shaderType>MoteGlow</shaderType>
+     <color>(254,189,58)</color>
         </graphicData>
 		<reachMaxRangeAlways>true</reachMaxRangeAlways>
         <projectile>
-            <damageDef>Cut</damageDef>
+            <damageDef>Flame</damageDef>
             <speed>150</speed>
-            <damageAmountBase>20</damageAmountBase>
+            <damageAmountBase>10</damageAmountBase>
             <armorPenetrationBase>2.6</armorPenetrationBase>
         </projectile>
         <drawOffscreen>true</drawOffscreen>
@@ -30,19 +31,19 @@
         <dealsDamageOnce>true</dealsDamageOnce>
         <minDistanceToAffect>2</minDistanceToAffect>
 		<stopWhenHit>false</stopWhenHit>
-
+<debugMode>true</debugMode>
 		<wideAtStart>True</wideAtStart>
     </VFECore.ExpandableProjectileDef>
 
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
-		<defName>cnvcullingblade</defName>
-		<label>Culling Blade</label>
+		<defName>cnvheatcullingblade</defName>
+		<label>HeatBlade</label>
 		<description>Blade</description>
 		
 		<turretType>Rotatable</turretType>
-		<shotSound>CullBladeOne</shotSound>
+		<shotSound>Pawn_Melee_MechanoidSlash_HitPawn</shotSound>
 		
-		<projectile>mechcullblade</projectile>
+		<projectile>heatmechcullblade</projectile>
 		<reloadTimer>0.0</reloadTimer>
 		<warmUpTimer>0.4</warmUpTimer>
 		
@@ -56,7 +57,7 @@
 		<projectileOffset>2.1</projectileOffset>
 		
 		<minRange>0</minRange>
-		<maxRange>7.9</maxRange>
+		<maxRange>3.9</maxRange>
 		
 		<recoil>
 			<distanceTotal>0.15</distanceTotal>

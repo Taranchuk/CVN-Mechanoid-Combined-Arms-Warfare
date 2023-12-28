@@ -19,6 +19,7 @@
 			<speed>360</speed>
 			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
 		</projectile>
+
 	</ThingDef>
 	
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">

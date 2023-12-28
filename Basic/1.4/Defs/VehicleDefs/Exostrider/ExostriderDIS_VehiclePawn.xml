@@ -4,8 +4,8 @@
 	<Vehicles.VehicleDef ParentName="BaseVehiclePawn">
 		<defName>CVN_ExostriderB</defName>
 		<label>Exostrider Disruptor</label>
-		<description>The Might Amphibious Walker was made material from blueprints lost from old internet archives unfortunately for all life, mechanoids found these blueprints and interprited them by their own designs, causing a drastic shift from an ICBM platform to a mobile carrier that alone with it's six SSM Rapture launchers and fabricators, Two charge autocannons, and heavy AA cannon has been seen to sweep across entire urbworlds unopposed, The Migth houses a build in shield generator while only marginally stronger than those fielded by Centurions is unusually resistant to emp pulses, while also being itself immune to such, additionally being resistant to explosive force, however it is due to the need to constantly keep the reactor cooled weak to heat based weaponry.</description>
-		
+		<description>The exostrider is a colossal six legged mech that employs a single large weapon to devistating effect, primarily used as a means to support troops from the back has a small risk of friendly fire if not used carefully \n\nThis version employs a large molecular disruptor which causes solid walls to crumble under their own weight and living things to become extremely volatile causing them to explode on death \n\nThe disruptor requires 5 high energy canisters to fire \nWhen linked to a mechanitor it provides an independent command range in a radius of 50 \nIn addition, it also provides 30 bandwith to the mechanitor in command.</description>
+
 		<graphicData>
 			<texPath>Things/Vehicles/Exostrider/Exostryder</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
@@ -61,19 +61,12 @@
          <value>0.4</value>
     </li>
 </damageDefMultipliers>
-			<roles>
-				<li>
-					<key>passenger</key>
-					<label>Passenger</label>
-					<slots>20</slots>
-				</li>
-			</roles>
 		</properties>
 		
 		<components>
 			<li>
 				<key>Engine</key>
-				<label>Fusion Reactor</label>
+				<label>Reactor</label>
 				<health>300</health>
 				<priorityStatEfficiency>true</priorityStatEfficiency>
 				<depth>External</depth>
@@ -104,10 +97,6 @@
 				<health>380</health>
 				<depth>External</depth>
 				
-				<armor>
-					<ArmorRating_Blunt>1.48</ArmorRating_Blunt>
-					<ArmorRating_Sharp>1.85</ArmorRating_Sharp>
-				</armor>
 				<hitbox>
 					<side>Left</side>
 				</hitbox>
@@ -122,10 +111,6 @@
 				<health>380</health>
 				<depth>External</depth>
 				
-				<armor>
-					<ArmorRating_Blunt>1.48</ArmorRating_Blunt>
-					<ArmorRating_Sharp>1.85</ArmorRating_Sharp>
-				</armor>
 				<hitbox>
 					<fallthrough>false</fallthrough>
 					<side>Left</side>
@@ -141,10 +126,6 @@
 				<health>380</health>
 				<depth>External</depth>
 					
-				<armor>
-					<ArmorRating_Blunt>1.48</ArmorRating_Blunt>
-					<ArmorRating_Sharp>1.85</ArmorRating_Sharp>
-				</armor>
 				<hitbox>
 					<fallthrough>false</fallthrough>
 					<side>Right</side>
@@ -160,10 +141,6 @@
 				<health>380</health>
 				<depth>External</depth>
 					
-				<armor>
-					<ArmorRating_Blunt>1.48</ArmorRating_Blunt>
-					<ArmorRating_Sharp>1.85</ArmorRating_Sharp>
-				</armor>
 				<hitbox>
 					<fallthrough>false</fallthrough>
 					<side>Right</side>
@@ -175,7 +152,7 @@
 			</li>
 			<li>
 				<key>Leftfauxlegs</key>
-				<label>Left Front Auxillary Leg</label>
+				<label>Left Rear Leg</label>
 				<health>160</health>
 				<depth>External</depth>
 				
@@ -186,17 +163,13 @@
 						<li>(-1, 2)</li>
 					</cells>
 				</hitbox>
-				<armor>
-					<ArmorRating_Blunt>1.48</ArmorRating_Blunt>
-					<ArmorRating_Sharp>1.85</ArmorRating_Sharp>
-				</armor>
 				<categories>
 					<li>MoveSpeed</li>
 				</categories>
 			</li>
 			<li>
 				<key>Rightfauxlegs</key>
-				<label>Right Front Auxillary Leg</label>
+				<label>Right Rear Leg</label>
 				<health>160</health>
 				<depth>External</depth>
 				
@@ -207,52 +180,6 @@
 						<li>(1, 1)</li>
 					</cells>
 				</hitbox>
-				<armor>
-					<ArmorRating_Blunt>1.48</ArmorRating_Blunt>
-					<ArmorRating_Sharp>1.85</ArmorRating_Sharp>
-				</armor>
-				<categories>
-					<li>MoveSpeed</li>
-				</categories>
-			</li>
-			<li>
-				<key>Leftrauxlegs</key>
-				<label>Left Rear Auxillary Legs</label>
-				<health>360</health>
-				<depth>External</depth>
-			
-				<armor>
-					<ArmorRating_Blunt>1.48</ArmorRating_Blunt>
-					<ArmorRating_Sharp>1.85</ArmorRating_Sharp>
-				</armor>
-				<hitbox>
-					<fallthrough>false</fallthrough>
-					<cells>
-						<li>(-1, -2)</li>
-					</cells>
-				</hitbox>
-				
-				<categories>
-					<li>MoveSpeed</li>
-				</categories>
-			</li>
-			<li>
-				<key>rihtrauxlegs</key>
-				<label>Right Rear Auxillary Legs</label>
-				<health>360</health>
-				<depth>External</depth>
-				
-				<armor>
-					<ArmorRating_Blunt>1.48</ArmorRating_Blunt>
-					<ArmorRating_Sharp>1.85</ArmorRating_Sharp>
-				</armor>
-				<hitbox>
-					<fallthrough>false</fallthrough>
-					<cells>
-						<li>(1, -2)</li>
-					</cells>
-				</hitbox>
-				
 				<categories>
 					<li>MoveSpeed</li>
 				</categories>
@@ -262,10 +189,6 @@
 				<label>Front Exterior Hull Plates</label>
 				<health>500</health>
 				<depth>External</depth>
-				<armor>
-					<ArmorRating_Blunt>1.48</ArmorRating_Blunt>
-					<ArmorRating_Sharp>1.85</ArmorRating_Sharp>
-				</armor>
 				<hitbox>
 					<fallthrough>false</fallthrough>
 					<side>Front</side>
@@ -276,10 +199,6 @@
 				<label>Left Exterior Hull Plates</label>
 				<health>500</health>
 				<depth>External</depth>
-				<armor>
-					<ArmorRating_Blunt>1.48</ArmorRating_Blunt>
-					<ArmorRating_Sharp>1.85</ArmorRating_Sharp>
-				</armor>
 				<hitbox>
 					<fallthrough>false</fallthrough>
 					<side>Left</side>
@@ -290,10 +209,6 @@
 				<label>Right Exterior Hull Plates</label>
 				<health>500</health>
 				<depth>External</depth>
-				<armor>
-					<ArmorRating_Blunt>1.48</ArmorRating_Blunt>
-					<ArmorRating_Sharp>1.85</ArmorRating_Sharp>
-				</armor>
 				<hitbox>
 					<fallthrough>false</fallthrough>
 					<side>Right</side>
@@ -304,10 +219,6 @@
 				<label>Rear Exterior Hull Plates</label>
 				<health>500</health>
 				<depth>External</depth>
-				<armor>
-					<ArmorRating_Blunt>1.48</ArmorRating_Blunt>
-					<ArmorRating_Sharp>1.85</ArmorRating_Sharp>
-				</armor>
 				<hitbox>
 					<fallthrough>false</fallthrough>
 					<side>Back</side>
@@ -391,10 +302,6 @@
 				<depth>External</depth>
 				<hitWeight>10</hitWeight>
 				
-				<armor>
-					<ArmorRating_Blunt>1.48</ArmorRating_Blunt>
-					<ArmorRating_Sharp>1.85</ArmorRating_Sharp>
-				</armor>
 			</li>
 		</components>
 

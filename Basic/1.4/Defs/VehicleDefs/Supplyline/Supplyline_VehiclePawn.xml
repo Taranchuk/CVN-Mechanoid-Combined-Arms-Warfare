@@ -221,8 +221,55 @@
 		<mechControlRange>0</mechControlRange>
       </li>
       <li Class="CompProperties_OverseerSubject"></li>
+    <li Class="CVN_CustomGameCondition.CompProperties_GameConditionTrigger">
+        <gizmoName>test1</gizmoName>
+        <gizmoDesc>test2</gizmoDesc>
+        <gizmoIcon>Gizmo/RepackGizmo</gizmoIcon>
+        <preventConditionStacking>false</preventConditionStacking>
+        <conditionDef>CVNFallout</conditionDef>
+        <conditionDuration>99999999</conditionDuration>
+    </li>
+
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 			</li>
+
+	<li Class="CVN_CorpseCleaner.CompProperties_CorpseCleaner">
+            <radius>10</radius>
+            <orbDef>CVN_Orb</orbDef>
+            <thingToSpawn>Chemfuel</thingToSpawn>
+            <timeToComplete>300</timeToComplete>
+            <amountToSpawnPerCorpse>1</amountToSpawnPerCorpse>
+            <gizmoName>ass</gizmoName>
+            <gizmoDesc>Corpse Fuel! Wow!</gizmoDesc>
+            <gizmoIcon>Gizmo/RepackGizmo</gizmoIcon>
+        </li>
+
+	<li Class="CVN_CorpseCleaner.CompProperties_CorpseCleaner">
+            <radius>10</radius>
+            <orbDef>CVN_Orb</orbDef>
+            <thingToSpawn>Steel</thingToSpawn>
+            <timeToComplete>300</timeToComplete>
+            <amountToSpawnPerCorpse>1</amountToSpawnPerCorpse>
+            <gizmoName>asses</gizmoName>
+            <gizmoDesc>Corpse Fuel! Wower!</gizmoDesc>
+            <gizmoIcon>Gizmo/RepackGizmo</gizmoIcon>
+        </li>
 		</comps>
 	</Vehicles.VehicleDef>
+
+<ThingDef ParentName="MoteBase">
+        <defName>CVN_Orb</defName>
+        <thingClass>CVN_CorpseCleaner.MoteMovingToPoint</thingClass>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <drawOffscreen>true</drawOffscreen>
+        <graphicData>
+            <texPath>Things/projectiles/Proj._EnergyBall</texPath>
+            <drawSize>0.7</drawSize>
+        </graphicData>
+        <mote>
+            <fadeInTime>0.05</fadeInTime>
+            <fadeOutTime>0.05</fadeOutTime>
+            <solidTime>1.9</solidTime>
+        </mote>
+    </ThingDef>
 </Defs>

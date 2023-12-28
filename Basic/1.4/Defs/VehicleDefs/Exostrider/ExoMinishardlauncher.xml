@@ -5,7 +5,9 @@
 		<defName>cvnexominirockets</defName>
 		<label>Exostrider Railgun</label>
 		<description>S</description>
+
 		<projectile>microflameshells</projectile>
+
 		<turretType>Rotatable</turretType>
 		<shotSound>ShotExorailgun</shotSound>
 		<magazineCapacity>20</magazineCapacity>

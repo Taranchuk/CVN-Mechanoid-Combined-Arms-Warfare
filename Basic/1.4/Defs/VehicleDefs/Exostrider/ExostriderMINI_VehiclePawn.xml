@@ -90,7 +90,6 @@
 				<hitbox>
 					<cells>
 						<li>(0, -1)</li>
-						<li>(0, -2)</li>
 					</cells>
 				</hitbox>
 				
@@ -183,7 +182,6 @@
 				<hitbox>
 					<fallthrough>false</fallthrough>
 					<cells>
-						<li>(-1, 2)</li>
 					</cells>
 				</hitbox>
 				<armor>
@@ -228,7 +226,6 @@
 				<hitbox>
 					<fallthrough>false</fallthrough>
 					<cells>
-						<li>(-1, -2)</li>
 					</cells>
 				</hitbox>
 				
@@ -249,7 +246,6 @@
 				<hitbox>
 					<fallthrough>false</fallthrough>
 					<cells>
-						<li>(1, -2)</li>
 					</cells>
 				</hitbox>
 				
@@ -339,7 +335,6 @@
 				<hitbox>
 					<cells>
 						<li>(0, -1)</li>
-						<li>(0, -2)</li>
 					</cells>
 				</hitbox>
 			</li>
@@ -353,7 +348,6 @@
 				<hitbox>
 					<cells>
 						<li>(0, -1)</li>
-						<li>(0, -2)</li>
 					</cells>
 				</hitbox>
 			</li>
@@ -367,7 +361,6 @@
 				<hitbox>
 					<cells>
 						<li>(0, -1)</li>
-						<li>(0, -2)</li>
 					</cells>
 				</hitbox>
 			</li>
@@ -380,7 +373,6 @@
 				<hitbox>
 					<cells>
 						<li>(0, -1)</li>
-						<li>(0, -2)</li>
 					</cells>
 				</hitbox>
 			</li>
@@ -399,6 +391,18 @@
 		</components>
 
 		<comps>
+<li Class="Thek_HediffArea.CompProperties_HediffArea">
+<hediffToApplyFriendlyHumanlikes>cvnlove</hediffToApplyFriendlyHumanlikes>
+<hediffToApplyHostileHumanlikes>cvnlove</hediffToApplyHostileHumanlikes>
+<hediffToApplyFriendlyMechanoids>cvnlove</hediffToApplyFriendlyMechanoids>
+<hediffToApplyHostileMechanoids>cvnlove</hediffToApplyHostileMechanoids>
+<areaRange>20.8</areaRange>
+<appliesToFriendlies>true</appliesToFriendlies>
+<appliesToHostiles>true</appliesToHostiles>
+<mechanoidExclusive>false</mechanoidExclusive>
+<refreshRateInTicks>600</refreshRateInTicks>
+<severityOffset>0.02</severityOffset>
+      </li>
       <li Class="VehicleMechanitorControl.CompProperties_MechanitorControl">
 		<bandwidthGain>30</bandwidthGain>
 		<mechControlRange>50</mechControlRange>
@@ -410,7 +414,7 @@
 						<turretDef>cvnexominirockets</turretDef>
 						
 						<renderProperties>
-							<north>(0, 0)</north>
+							<north>(0, -0.5)</north>
 							<south>(0, 1)</south>
 							<east>(-0.8, 1)</east>
 						</renderProperties>
@@ -424,6 +428,7 @@
 					</li>
 				</turrets>
 			</li>
+
 		</comps>
 	</Vehicles.VehicleDef>
 </Defs>

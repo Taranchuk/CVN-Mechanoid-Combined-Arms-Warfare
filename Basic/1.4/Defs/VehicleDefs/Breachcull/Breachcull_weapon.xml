@@ -2,69 +2,69 @@
 
 <Defs>
 	<ThingDef ParentName="BaseBullet">
-		<defName>CVN_sabreround</defName>
-		<label>low energy bolt</label>
+		<defName>Breacherculler_bullet</defName>
+		<label>Shock gun bullet</label>
 		
 		<graphicData>
-			<texPath>Things/projectiles/BlueEnergy_Shot</texPath>
+			<texPath>Things/projectiles/5.56_Shot</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>TransparentPostLight</shaderType>
-			<drawSize>(2, 2)</drawSize>
 		</graphicData>
-		
 		<projectile>
+
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>200</damageAmountBase>
-      			<armorPenetrationBase>3.0</armorPenetrationBase>
-			<speed>360</speed>
-			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<damageAmountBase>5</damageAmountBase>
+			<speed>100</speed>
+			<soundHitThickRoof>VulcanfireBE</soundHitThickRoof>
 		</projectile>
-  </ThingDef>
+	</ThingDef>
+	
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
-		<defName>sabrecannon</defName>
-		<label>Sabre Pulse Cannon</label>
+		<defName>Breachcullturret</defName>
+		<label>High Reaver gattling</label>
 		<description>S</description>
 		
 		<turretType>Rotatable</turretType>
-		<shotSound>Sabrefire</shotSound>
+		<shotSound>VulcanfireBE</shotSound>
 		
-		<projectile>CVN_sabreround</projectile>
-		<reloadTimer>1.5</reloadTimer>
-		<warmUpTimer>3.4</warmUpTimer>
+		<projectile>Breacherculler_bullet</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.4</warmUpTimer>
 		
-		<magazineCapacity>1</magazineCapacity>
+		<magazineCapacity>60</magazineCapacity>
 		<genericAmmo>true</genericAmmo>
-		
-		<hitFlags>IntendedTarget</hitFlags>
 		
 		<autoSnapTargeting>false</autoSnapTargeting>
 		<rotationSpeed>2.95</rotationSpeed>
 		
-		<projectileOffset>2.1</projectileOffset>
+		<projectileOffset>1.1</projectileOffset>
 		
-		<minRange>3</minRange>
-		<maxRange>32.9</maxRange>
+		<minRange>0</minRange>
+		<maxRange>15.9</maxRange>
+		
+		
 		
 		<fireModes>
 			<li>
-				<shotsPerBurst>1</shotsPerBurst>
+				<shotsPerBurst>20</shotsPerBurst>
 				<ticksBetweenShots>5</ticksBetweenShots>
-				<ticksBetweenBursts>5</ticksBetweenBursts>
+				<ticksBetweenBursts>20</ticksBetweenBursts>
+				<spreadRadius>4</spreadRadius>
 				<label>Burst</label>
 				<texPath>UI/Gizmos/FireRate_Single</texPath>
 			</li>
 		</fireModes>
 
 		<graphicData>
-			<texPath>Things/Vehicles/Sabre/FUCK</texPath>
+			<texPath>Things/Vehicles/Breachcull/MechGearRayTurret</texPath>
 			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
-			<drawSize>(6, 6)</drawSize>
+			<drawSize>(0.8, 0.8)</drawSize>
 		</graphicData>
 		
 		<ammunition>
 			<thingDefs>
-				<li>CVNAmmoBluestandard</li>
+				<li>CVNAmmoAPStandard</li>
 			</thingDefs>
 		</ammunition>
 	</Vehicles.VehicleTurretDef>

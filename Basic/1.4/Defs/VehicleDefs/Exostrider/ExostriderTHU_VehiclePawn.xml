@@ -2,9 +2,9 @@
 
 <Defs>	
 	<Vehicles.VehicleDef ParentName="BaseVehiclePawn">
-		<defName>CVN_ExostriderA</defName>
-		<label>Exostrider Railgun</label>
-		<description>The exostrider is a colossal six legged mech that employs a single large weapon to devistating effect, primarily used as a means to support troops from the back has a small risk of friendly fire if not used carefully \n\nThis version employs an extremely large charge railgun propelling miniscule steel projectiles at such velocity that it penetrates most materials and targets with more than enough energy to continue their trajectory \n\nThe railgun requires 5 low energy canisters to fire \nWhen linked to a mechanitor it provides an independent command range in a radius of 50 \nIn addition, it also provides 30 bandwith to the mechanitor in command.</description>		
+		<defName>CVN_ExostriderC</defName>
+		<label>Exostrider Disruptor</label>
+<description>The exostrider is a colossal six legged mech that employs a single large weapon to devistating effect, primarily used as a means to support troops from the back has a small risk of friendly fire if not used carefully \n\nThis version uses a somewhat mundane lightning sphere cannon, which causes severe burns to anything caught in it's radius, very reliable and lacking a gimmick \n\nThe cannon requires 5 low energy canisters to fire \nWhen linked to a mechanitor it provides an independent command range in a radius of 50 \nIn addition, it also provides 30 bandwith to the mechanitor in command.</description>		
 		<graphicData>
 			<texPath>Things/Vehicles/Exostrider/Exostryder</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
@@ -17,8 +17,7 @@
 
 		<fillPercent>1</fillPercent>
 		
-		<buildDef>CVN_ExostriderA_blueprint</buildDef>
-		
+		<buildDef>CVN_ExostriderC_blueprint</buildDef>
 		<size>(4, 10)</size>
 		
 		<vehicleCategory>Combat</vehicleCategory>
@@ -313,7 +312,7 @@
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
-						<turretDef>cvnexorailgun</turretDef>
+						<turretDef>thunderorbcannon</turretDef>
 						
 						<renderProperties>
 							<north>(0, 0)</north>
