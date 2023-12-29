@@ -18,10 +18,11 @@
 		<soundDef>Miasmicwhisper</soundDef>
 		<soundInterval>1600</soundInterval>
             <replacePlantWith>
-                <li>cryst</li>
+                <li>CVNCrystGrowth</li>
+                <li>CVNCrystTree</li>
             </replacePlantWith>
             <replaceCorpseWith>
-                <li>CommsConsole</li>
+                <li>CVNCrystCorpse</li>
             </replaceCorpseWith>
             <amountOfThingToReplacePerTrigger>30</amountOfThingToReplacePerTrigger> <!-- if empty, default value is 3 -->
             <thingsReplacement>
@@ -30,8 +31,44 @@
                     <replacementThing>OrbitalTradeBeacon</replacementThing>        
                 </li>
                 <li>
+                    <thingUnderRoofToReplace>Granite</thingUnderRoofToReplace>
+                    <replacementThing>CVNVoidcrystalwall</replacementThing>        
+                </li>
+                <li>
+                    <thingUnderRoofToReplace>Marble</thingUnderRoofToReplace>
+                    <replacementThing>CVNVoidcrystalwall</replacementThing>        
+                </li>
+                <li>
+                    <thingUnderRoofToReplace>Slate</thingUnderRoofToReplace>
+                    <replacementThing>CVNVoidcrystalwall</replacementThing>        
+                </li>
+                <li>
+                    <thingUnderRoofToReplace>Limestone</thingUnderRoofToReplace>
+                    <replacementThing>CVNVoidcrystalwall</replacementThing>        
+                </li>
+                <li>
+                    <thingUnderRoofToReplace>Sandstone</thingUnderRoofToReplace>
+                    <replacementThing>CVNVoidcrystalwall</replacementThing>        
+                </li>
+                <li>
                     <thingToReplace>Granite</thingToReplace>
-                    <replacementThing>Slate</replacementThing>        
+                    <replacementThing>CVNVoidcrystalwall</replacementThing>        
+                </li>
+                <li>
+                    <thingToReplace>Marble</thingToReplace>
+                    <replacementThing>CVNVoidcrystalwall</replacementThing>        
+                </li>
+                <li>
+                    <thingToReplace>Slate</thingToReplace>
+                    <replacementThing>CVNVoidcrystalwall</replacementThing>        
+                </li>
+                <li>
+                    <thingToReplace>Limestone</thingToReplace>
+                    <replacementThing>CVNVoidcrystalwall</replacementThing>        
+                </li>
+                <li>
+                    <thingToReplace>Sandstone</thingToReplace>
+                    <replacementThing>CVNVoidcrystalwall</replacementThing>        
                 </li>
                  <li>
                     <terrainToReplace>Soil</terrainToReplace>
@@ -47,56 +84,338 @@
     </modExtensions>
   </GameConditionDef>
 
-  <ThingDef ParentName="BuildingBase">
-    <defName>cryst</defName>
-    <label>cryst</label>
-    <description>When it detects fire, this safety device pops and sprays a fire-retardant foam in a circular field around itself. Can also be triggered manually.</description>
-    <graphicData>
-      <texPath>Things/Building/Misc/FirefoamPopper</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shadowData>
-        <volume>(0.25, 0.35, 0.25)</volume>
-        <offset>(0,0,-0.1)</offset>
-      </shadowData>
-      <damageData>
-        <rect>(0.2,0.2,0.6,0.6)</rect>
-      </damageData>
-    </graphicData>
-    <comps>
+	<RecipeDef>
+		<defName>CVN_CrystaltoSteel</defName>
+		<label>Extract Steel from Void Crystals</label>
+		<description>Extract steel from .</description>
+		<jobString>Refining void crystals.</jobString>
+		<effectWorking>Cremate</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<workAmount>2000</workAmount>
+		<recipeUsers>
+				<li>BiofuelRefinery</li>	  
+		</recipeUsers>	
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		
+		<ingredients>
+			<li>
+				<filter>
+				  <thingDefs>
+					<li>CVNVoidCrystal</li>
+				  </thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>CVNVoidCrystal</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Steel>15</Steel>
+			
+		</products>
+	</RecipeDef>
+	<RecipeDef>
+		<defName>CVN_CrystaltoUranium</defName>
+		<label>Extract Uranium from Void Crystals</label>
+		<description>Extract Uranium from .</description>
+		<jobString>Refining void crystals.</jobString>
+		<effectWorking>Cremate</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<workAmount>2000</workAmount>
+		<recipeUsers>
+				<li>BiofuelRefinery</li>	  
+		</recipeUsers>	
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		
+		<ingredients>
+			<li>
+				<filter>
+				  <thingDefs>
+					<li>CVNVoidCrystal</li>
+				  </thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>CVNVoidCrystal</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Uranium>5</Uranium>
+			
+		</products>
+	</RecipeDef>
+	<RecipeDef>
+		<defName>CVN_CrystaltoPlasteel</defName>
+		<label>Extract Plasteel from Void Crystals</label>
+		<description>Extract Plasteel from .</description>
+		<jobString>Refining void crystals.</jobString>
+		<effectWorking>Cremate</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<workAmount>2000</workAmount>
+		<recipeUsers>
+				<li>BiofuelRefinery</li>	  
+		</recipeUsers>	
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		
+		<ingredients>
+			<li>
+				<filter>
+				  <thingDefs>
+					<li>CVNVoidCrystal</li>
+				  </thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>CVNVoidCrystal</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Plasteel>2</Plasteel>
+			
+		</products>
+	</RecipeDef>
+	<RecipeDef>
+		<defName>CVN_CrystaltoSilver</defName>
+		<label>Extract Silver from Void Crystals</label>
+		<description>Extract Silver from .</description>
+		<jobString>Refining void crystals.</jobString>
+		<effectWorking>Cremate</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<workAmount>2000</workAmount>
+		<recipeUsers>
+				<li>BiofuelRefinery</li>	  
+		</recipeUsers>	
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		
+		<ingredients>
+			<li>
+				<filter>
+				  <thingDefs>
+					<li>CVNVoidCrystal</li>
+				  </thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>CVNVoidCrystal</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Silver>30</Silver>
+		</products>
+	</RecipeDef>
+	<RecipeDef>
+		<defName>CVN_CrystaltoGold</defName>
+		<label>Extract Gold from Void Crystals</label>
+		<description>Extract Gold from .</description>
+		<jobString>Refining void crystals.</jobString>
+		<effectWorking>Cremate</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<workAmount>2000</workAmount>
+		<recipeUsers>
+				<li>BiofuelRefinery</li>	  
+		</recipeUsers>	
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		
+		<ingredients>
+			<li>
+				<filter>
+				  <thingDefs>
+					<li>CVNVoidCrystal</li>
+				  </thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>CVNVoidCrystal</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Gold>4</Gold>
+			
+		</products>
+	</RecipeDef>
 
-    </comps>
-    <tickerType>Normal</tickerType>
-    <altitudeLayer>Building</altitudeLayer>
-    <minifiedDef>MinifiedThing</minifiedDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVNVoidCrystal</defName>
+    <label>Void Crystal</label>
+    <description>Crystals, plucked from places touched by the void, often the result of a Void Herald, crystals made of a variety of compacted elements found in organic sources, best not to think about where this came from, can be refined into most metallic elements</description>
+    <graphicData>
+      <texPath>Things/CrystalStuff/Crystals</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>75</stackLimit>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <MarketValue>3</MarketValue>
+      <Mass>0.25</Mass>
+      <Flammability>0.0</Flammability>
+    </statBases>
     <thingCategories>
-      <li>BuildingsMisc</li>
+      <li>ItemsMisc</li>
     </thingCategories>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <techLevel>Spacer</techLevel>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVNCrystCorpse</defName>
+    <label>Crystalized Corpse</label>
+    <description>The body is unrecognizable, all you know is that it was once human, ribs cracked, flesh fused and crystalized, even the marrow in the bones are pure void crystals.</description>
+    <graphicData>
+      <texPath>Things/CrystalStuff/CrystalCorpse</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>(1.75,1.75)</drawSize>
+      <shadowData>
+        <volume>(0.2, 0.6, 0.2)</volume>
+      </shadowData>
+    </graphicData>
     <statBases>
       <MaxHitPoints>50</MaxHitPoints>
       <WorkToBuild>1500</WorkToBuild>
       <Mass>10</Mass>
-      <Flammability>1.0</Flammability>
-      <Beauty>-8</Beauty>
+      <Flammability>0</Flammability>
+      <Beauty>8</Beauty>
     </statBases>
-    <fillPercent>0.30</fillPercent>
-    <costList>
-      <Steel>75</Steel>
-      <ComponentIndustrial>1</ComponentIndustrial>
-    </costList>
-    <specialDisplayRadius>9.9</specialDisplayRadius>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <pathCost>30</pathCost>
-    <passability>PassThroughOnly</passability>
-    <designationCategory>Misc</designationCategory>
-    <uiOrder>2070</uiOrder>
-    <rotatable>false</rotatable>
-    <designationHotKey>Misc7</designationHotKey>
-    <researchPrerequisites>
-      <li>Firefoam</li>
-    </researchPrerequisites>
-    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
     <building>
-      <mineableYieldWasteable>false</mineableYieldWasteable>
+      <isInert>true</isInert>
+    </building>
+    <costList>
+      <CVNVoidCrystal>60</CVNVoidCrystal>
+    </costList>
+    <fillPercent>0.10</fillPercent>
+    <pathCost>10</pathCost>
+    <passability>PassThroughOnly</passability>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVNCrystGrowth</defName>
+    <label>Crystalized Growth</label>
+    <description>A large mass of crystals, theres no telling what this formed from, but it's safe to bet it's best not to think about it, it can be harvested for a small some of void crystals.</description>
+    <graphicData>
+      <texPath>Things/CrystalStuff/CrystalGrowth</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <shadowData>
+        <volume>(0.2, 0.6, 0.2)</volume>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+      <Mass>10</Mass>
+      <Flammability>0</Flammability>
+      <Beauty>8</Beauty>
+    </statBases>
+    <building>
+      <isInert>true</isInert>
+    </building>
+    <costList>
+      <CVNVoidCrystal>20</CVNVoidCrystal>
+    </costList>
+    <fillPercent>0.10</fillPercent>
+    <pathCost>10</pathCost>
+    <passability>PassThroughOnly</passability>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVNCrystTree</defName>
+    <label>Crystalized Tree</label>
+    <description>A large tree, formed from void crystals, it can be harvested for a small some of void crystals.</description>
+    <graphicData>
+      <texPath>Things/CrystalStuff/CrystalTree</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>(5,5)</drawSize>
+      <shadowData>
+        <volume>(0.2, 0.6, 0.2)</volume>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+      <Mass>10</Mass>
+      <Flammability>0</Flammability>
+      <Beauty>8</Beauty>
+    </statBases>
+    <building>
+      <isInert>true</isInert>
+    </building>
+    <costList>
+      <CVNVoidCrystal>30</CVNVoidCrystal>
+    </costList>
+    <fillPercent>0.10</fillPercent>
+    <pathCost>10</pathCost>
+    <passability>PassThroughOnly</passability>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVNCrystGrass</defName>
+    <label>Crystalized Grass</label>
+    <description>A cluster of void crystals, roughly appearing to have been grass, it can be harvested for a small some of void crystals.</description>
+    <graphicData>
+      <texPath>Things/CrystalStuff/CrystalGrass</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <shadowData>
+        <volume>(0.2, 0.6, 0.2)</volume>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+      <Mass>10</Mass>
+      <Flammability>0</Flammability>
+      <Beauty>8</Beauty>
+    </statBases>
+    <building>
+      <isInert>true</isInert>
+    </building>
+    <costList>
+      <CVNVoidCrystal>10</CVNVoidCrystal>
+    </costList>
+    <fillPercent>0.10</fillPercent>
+    <pathCost>10</pathCost>
+    <passability>PassThroughOnly</passability>
+  </ThingDef>
+
+  <ThingDef ParentName="RockBase">
+    <defName>CVNVoidcrystalwall</defName>
+    <label>Void Crystal Wall</label>
+    <description>A wall, made purely of void crystals.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(129,0,255)</color>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1500</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>CVNVoidCrystal</mineableThing>
+      <mineableYield>5</mineableYield>
+      <mineableScatterCommonality>0</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>4~12</mineableScatterLumpSizeRange>
     </building>
   </ThingDef>
 
