@@ -209,7 +209,24 @@
 		</components>
 		
 		<comps>	
-
+		<li Class="taranchuk_flightcombat.CompProperties_FlightMode">
+			<flightModeLabel>Flight mode</flightModeLabel>
+			<flightModeDesc>Toggle flight mode.</flightModeDesc>
+			<flightModeUITexPath>UI/Abilities/Waterskip</flightModeUITexPath>
+			<flightSpeedPerTick>0.4</flightSpeedPerTick>
+			<flightSpeedTurningPerTick>0.3</flightSpeedTurningPerTick>
+			<turnAnglePerTick>4</turnAnglePerTick>
+			<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick>
+			<distanceFromTargetToStartTurning>10</distanceFromTargetToStartTurning>
+			<flightGraphicData>
+				<texPath>Things/Vehicles/Mechtek/Mechtek</texPath>
+				<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+				<shaderType>CutoutComplexPattern</shaderType>
+				<drawSize>(11,11)</drawSize>
+				<drawRotated>true</drawRotated>
+				<color>(155, 155, 155)</color>
+			</flightGraphicData>
+		</li>
       <li Class="VehicleMechanitorControl.CompProperties_MechanitorControl">
 		<bandwidthGain>0</bandwidthGain>
 		<mechControlRange>0</mechControlRange>
