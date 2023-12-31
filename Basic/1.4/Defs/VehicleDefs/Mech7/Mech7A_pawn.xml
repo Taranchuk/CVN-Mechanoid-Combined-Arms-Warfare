@@ -14,7 +14,8 @@
 			<drawRotated>true</drawRotated>
 			<color>(155, 155, 155)</color>
 		</graphicData>
-		
+		<seeThroughFog>true</seeThroughFog>
+		<drawOffscreen>true</drawOffscreen>
 		<fillPercent>1</fillPercent>
 		
 		<nameable>false</nameable>
@@ -215,7 +216,7 @@
 			<flightModeUITexPath>UI/Abilities/Waterskip</flightModeUITexPath>
 			<flightSpeedPerTick>0.4</flightSpeedPerTick>
 			<flightSpeedTurningPerTick>0.3</flightSpeedTurningPerTick>
-			<turnAnglePerTick>4</turnAnglePerTick>
+			<turnAnglePerTick>2</turnAnglePerTick>
 			<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick>
 			<distanceFromTargetToStartTurning>10</distanceFromTargetToStartTurning>
 			<flightGraphicData>
