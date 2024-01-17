@@ -5,7 +5,7 @@
     <defName>CVNFallout</defName>
     <conditionClass>CVN_CustomGameCondition.GameCondition_CVNFallout</conditionClass>
     <label>CVNFallout</label>
-    <description>. . .</description>
+    <description>A thick miasma of mechanites which attempt to crystalize everything they touch into hardened metals, this can be resisted like most toxins as they use a series of chemical exposures, the miasma is so thick in the area that it completely blocks light</description>
     <letterText>. . .</letterText>
     <letterDef>NegativeEvent</letterDef>
     <canBePermanent>false</canBePermanent>
@@ -71,9 +71,8 @@
                     <replacementThing>CVNVoidcrystalwall</replacementThing>        
                 </li>
                  <li>
-                    <terrainToReplace>Soil</terrainToReplace>
-                    <terrainDef>Ice</terrainDef>        
-                    <cellToReplacePerTrigger>2</cellToReplacePerTrigger>      
+                    <terrainDef>CVNcrystalfloor</terrainDef>        
+                    <cellToReplacePerTrigger>9</cellToReplacePerTrigger>      
                 </li>
             </thingsReplacement>
             <skyColor>(105,0,255)</skyColor>
@@ -402,21 +401,71 @@
     <label>Void Crystal Wall</label>
     <description>A wall, made purely of void crystals.</description>
     <graphicData>
-      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <texPath>Things/CrystalStuff/CrystalWall/Coventech_Moth_ArtBoard</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <color>(129,0,255)</color>
     </graphicData>
     <statBases>
-      <MaxHitPoints>1500</MaxHitPoints>
+      <MaxHitPoints>500</MaxHitPoints>
     </statBases>
     <building>
       <isResourceRock>true</isResourceRock>
       <mineableThing>CVNVoidCrystal</mineableThing>
-      <mineableYield>5</mineableYield>
+      <mineableYield>20</mineableYield>
       <mineableScatterCommonality>0</mineableScatterCommonality>
       <mineableScatterLumpSizeRange>4~12</mineableScatterLumpSizeRange>
     </building>
+    <costList>
+      <CVNVoidCrystal>20</CVNVoidCrystal>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Structure</designationCategory>
+    <category>Building</category>
   </ThingDef>
 
+  <TerrainDef ParentName="NaturalTerrainBase">
+    <defName>CVNcrystalfloor</defName>
+    <label>Crystalized Ground</label>
+    <texturePath>Things/CrystalStuff/CrystalFloor/CrystalFloor</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>350</renderPrecedence>
+    <pathCost>2</pathCost>
+    <statBases>
+      <Beauty>2</Beauty>
+      <BeautyOutdoors>2</BeautyOutdoors>
+    </statBases>
+    <scatterType>SoftGray</scatterType>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+      <li>Diggable</li>
+    </affordances>
+    <fertility>0.00</fertility>
+    <takeFootprints>False</takeFootprints>
+    <costList>
+      <CVNVoidCrystal>20</CVNVoidCrystal>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+  </TerrainDef>
+
+  <TerrainDef ParentName="FloorBase">
+    <defName>CVNcrystalfloorbuild</defName>
+    <label>Crystalized Ground</label>
+    <description>Void Crystals laid neatly in the way they convert the soil.</description>
+    <texturePath>Things/CrystalStuff/CrystalFloor/CrystalFloor</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>70</renderPrecedence>
+    <isPaintable>false</isPaintable>
+    <statBases>
+      <Beauty>2</Beauty>
+      <WorkToBuild>500</WorkToBuild>
+      <CleaningTimeFactor>0.8</CleaningTimeFactor>
+    </statBases>
+    <costList>
+      <CVNVoidCrystal>20</CVNVoidCrystal>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+  </TerrainDef>
 </Defs>

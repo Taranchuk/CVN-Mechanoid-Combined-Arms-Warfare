@@ -19,7 +19,7 @@
 			<damageAmountBase>10</damageAmountBase>
 			<speed>50</speed>
       			<flyOverhead>true</flyOverhead>
-			<explosionRadius>14</explosionRadius>
+			<explosionRadius>6</explosionRadius>
 			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
 			<soundExplode>MortarBomb_Explode</soundExplode>
 			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
@@ -32,5 +32,8 @@
 				<initialDispersionFromTarget>20.5</initialDispersionFromTarget>
 			</li>
 		</comps>
+		<drawOffscreen>true</drawOffscreen>
 	</ThingDef>
+
+
 </Defs>
