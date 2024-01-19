@@ -219,6 +219,16 @@
 			<turnAnglePerTick>2</turnAnglePerTick>
 			<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick>
 			<distanceFromTargetToStartTurning>10</distanceFromTargetToStartTurning>
+			<hoverModeLabel>Hover mode</hoverModeLabel>
+			<hoverModeDesc>Toggle hover mode.</hoverModeDesc>
+			<hoverModeUITexPath>UI/Abilities/Waterskip</hoverModeUITexPath>
+			<takeoffTicks>300</takeoffTicks>
+			<landingTicks>300</landingTicks>
+			<moveWhileTakingOff>true</moveWhileTakingOff>
+			<runwayTerrainRequirements>
+				<li>Medium</li>
+				<li>Heavy</li>
+			</runwayTerrainRequirements>
 			<flightGraphicData>
 				<texPath>Things/Vehicles/Mechtek/Mechtek</texPath>
 				<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
@@ -227,6 +237,73 @@
 				<drawRotated>true</drawRotated>
 				<color>(155, 155, 155)</color>
 			</flightGraphicData>
+			<flightFlecks>
+				<li>
+					<fleck>CVN_RocketExhaust</fleck>
+					<solidTime>0.20</solidTime>
+					<velocitySpeed>0</velocitySpeed>
+					<position>(-4.5, 0, 1)</position>
+					<angleOffset>0</angleOffset>
+					<spawnTickRate>1</spawnTickRate>
+					<scale>1</scale>
+				</li>
+				<li>
+					<fleck>CVN_RocketExhaust</fleck>
+					<solidTime>0.20</solidTime>
+					<velocitySpeed>0</velocitySpeed>
+					<position>(-4.5, 0, -1)</position>
+					<angleOffset>0</angleOffset>
+					<spawnTickRate>1</spawnTickRate>
+					<scale>1</scale>
+				</li>
+			</flightFlecks>
+			<hoverFlecks>
+				<!-- can be filled with the same data as the flight flecks if necessary -->
+			</hoverFlecks>
+			<takeoffFlecks>
+				<li>
+					<fleck>CVN_RocketExhaust</fleck>
+					<solidTime>0.20</solidTime>
+					<solidTimeScaleByTakeoffInverse>true</solidTimeScaleByTakeoffInverse>
+					<velocitySpeed>0</velocitySpeed>
+					<position>(-4.5, 0, 1)</position>
+					<angleOffset>0</angleOffset>
+					<spawnTickRate>1</spawnTickRate>
+					<scale>1</scale>
+				</li>
+				<li>
+					<fleck>CVN_RocketExhaust</fleck>
+					<solidTime>0.20</solidTime>
+					<solidTimeScaleByTakeoffInverse>true</solidTimeScaleByTakeoffInverse>
+					<velocitySpeed>0</velocitySpeed>
+					<position>(-4.5, 0, -1)</position>
+					<angleOffset>0</angleOffset>
+					<spawnTickRate>1</spawnTickRate>
+					<scale>1</scale>
+				</li>
+			</takeoffFlecks>
+			<landingFlecks>
+				<li>
+					<fleck>CVN_RocketExhaust</fleck>
+					<solidTime>0.20</solidTime>
+					<solidTimeScaleByTakeoff>true</solidTimeScaleByTakeoff>
+					<velocitySpeed>0</velocitySpeed>
+					<position>(-4.5, 0, 1)</position>
+					<angleOffset>0</angleOffset>
+					<spawnTickRate>1</spawnTickRate>
+					<scale>1</scale>
+				</li>
+				<li>
+					<fleck>CVN_RocketExhaust</fleck>
+					<solidTime>0.20</solidTime>
+					<solidTimeScaleByTakeoff>true</solidTimeScaleByTakeoff>
+					<velocitySpeed>0</velocitySpeed>
+					<position>(-4.5, 0, -1)</position>
+					<angleOffset>0</angleOffset>
+					<spawnTickRate>1</spawnTickRate>
+					<scale>1</scale>
+				</li>
+			</landingFlecks>
 		</li>
       <li Class="VehicleMechanitorControl.CompProperties_MechanitorControl">
 		<bandwidthGain>0</bandwidthGain>
