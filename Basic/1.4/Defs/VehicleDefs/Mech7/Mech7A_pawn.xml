@@ -222,6 +222,9 @@
 			<hoverModeLabel>Hover mode</hoverModeLabel>
 			<hoverModeDesc>Toggle hover mode.</hoverModeDesc>
 			<hoverModeUITexPath>UI/Abilities/Waterskip</hoverModeUITexPath>
+			<faceTargetLabel>Face target</faceTargetLabel>
+			<faceTargetDesc>Face target.</faceTargetDesc>
+			<faceTargetUITexPath>UI/Abilities/Waterskip</faceTargetUITexPath>
 			<takeoffTicks>300</takeoffTicks>
 			<landingTicks>300</landingTicks>
 			<moveWhileTakingOff>true</moveWhileTakingOff>
@@ -304,6 +307,7 @@
 					<scale>1</scale>
 				</li>
 			</landingFlecks>
+			<waypointFleck>CVN_WaypointMech7</waypointFleck>
 		</li>
       <li Class="VehicleMechanitorControl.CompProperties_MechanitorControl">
 		<bandwidthGain>0</bandwidthGain>
@@ -322,7 +326,7 @@
 						</renderProperties>
 						
 						<gizmoLabel>Main Turret</gizmoLabel>
-						
+						<angleRestricted>-30, 30</angleRestricted>
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
 						<key>cannon1</key>
