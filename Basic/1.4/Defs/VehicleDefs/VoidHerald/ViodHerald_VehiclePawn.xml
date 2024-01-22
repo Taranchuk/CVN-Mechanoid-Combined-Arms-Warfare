@@ -416,14 +416,18 @@
 
 		<comps>
 		<li Class="taranchuk_flightcombat.CompProperties_FlightMode">
-			<flightModeLabel>Flight mode</flightModeLabel>
-			<flightModeDesc>Toggle flight mode.</flightModeDesc>
-			<flightModeUITexPath>UI/Abilities/Waterskip</flightModeUITexPath>
+			<flightCommands>
+				<flightMode>
+					<label>Flight mode</label>
+					<description>Toggle flight mode.</description>
+					<texPath>UI/Abilities/Waterskip</texPath>
+				</flightMode>
+			</flightCommands>
 			<flightSpeedPerTick>0.2</flightSpeedPerTick>
 			<flightSpeedTurningPerTick>0.5</flightSpeedTurningPerTick>
 			<turnAnglePerTick>2</turnAnglePerTick>
 			<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick>
-			<distanceFromTargetToStartTurning>10</distanceFromTargetToStartTurning>
+			<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
 			<flightGraphicData>
 				<texPath>Things/Vehicles/VoidHerald/MothFlying</texPath>
 				<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
