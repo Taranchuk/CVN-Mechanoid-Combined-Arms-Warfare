@@ -211,20 +211,34 @@
 		
 		<comps>	
 		<li Class="taranchuk_flightcombat.CompProperties_FlightMode">
-			<flightModeLabel>Flight mode</flightModeLabel>
-			<flightModeDesc>Toggle flight mode.</flightModeDesc>
-			<flightModeUITexPath>UI/Abilities/Waterskip</flightModeUITexPath>
+			<flightCommands>
+				<flightMode>
+					<label>Flight mode</label>
+					<description>Toggle flight mode.</description>
+					<texPath>UI/Abilities/Waterskip</texPath>
+				</flightMode>
+				<hoverMode>
+					<label>Hover mode</label>
+					<description>Toggle hover mode.</description>
+					<texPath>UI/Abilities/Waterskip</texPath>
+				</hoverMode>
+				<faceTarget>
+					<label>Face target (hover)</label>
+					<description>Face target while hovering.</description>
+					<texPath>UI/Abilities/Waterskip</texPath>
+				</faceTarget>
+				<chaseTarget>
+					<label>Chase target (flight)</label>
+					<description>Chase target while flying.</description>
+					<texPath>UI/Abilities/Waterskip</texPath>
+				</chaseTarget>
+			</flightCommands>
 			<flightSpeedPerTick>0.4</flightSpeedPerTick>
 			<flightSpeedTurningPerTick>0.3</flightSpeedTurningPerTick>
 			<turnAnglePerTick>2</turnAnglePerTick>
 			<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick>
-			<distanceFromTargetToStartTurning>10</distanceFromTargetToStartTurning>
-			<hoverModeLabel>Hover mode</hoverModeLabel>
-			<hoverModeDesc>Toggle hover mode.</hoverModeDesc>
-			<hoverModeUITexPath>UI/Abilities/Waterskip</hoverModeUITexPath>
-			<faceTargetLabel>Face target</faceTargetLabel>
-			<faceTargetDesc>Face target.</faceTargetDesc>
-			<faceTargetUITexPath>UI/Abilities/Waterskip</faceTargetUITexPath>
+			<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
+			<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
 			<takeoffTicks>300</takeoffTicks>
 			<landingTicks>300</landingTicks>
 			<moveWhileTakingOff>true</moveWhileTakingOff>
@@ -320,12 +334,12 @@
 						<turretDef>fuckgun</turretDef>
 						
 						<renderProperties>
-							<north>(0, -0.5)</north>
-							<south>(0, 1)</south>
-							<east>(-0.5, 0)</east>
+							<north>(2, -0.5)</north>
+							<south>(2, 1)</south>
+							<east>(2, 2)</east>
 						</renderProperties>
 						
-						<gizmoLabel>Main Turret</gizmoLabel>
+						<gizmoLabel>Main Turret test</gizmoLabel>
 						<angleRestricted>-30, 30</angleRestricted>
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
