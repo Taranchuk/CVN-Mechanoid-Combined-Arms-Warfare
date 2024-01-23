@@ -233,6 +233,28 @@
 					<texPath>UI/Abilities/Waterskip</texPath>
 				</chaseTarget>
 			</flightCommands>
+			<bombOptions>
+				<li>
+					<label>High Explosive bomb</label>
+					<texPath>Things/Projectile/ShellHighExplosive</texPath>
+					<costList>
+						<Steel>10</Steel>
+						<Chemfuel>20</Chemfuel>
+					</costList>
+					<projectile>CVN_BombHighExplosive</projectile>
+					<cooldownTicks>60</cooldownTicks>
+				</li>
+				<li>
+					<label>Incendionary bomb</label>
+					<texPath>Things/Projectile/ShellIncendiary</texPath>
+					<costList>
+						<Steel>10</Steel>
+						<Chemfuel>20</Chemfuel>
+					</costList>
+					<projectile>CVN_BombIncendiary</projectile>
+					<cooldownTicks>60</cooldownTicks>
+				</li>
+			</bombOptions>
 			<flightSpeedPerTick>0.4</flightSpeedPerTick>
 			<flightSpeedTurningPerTick>0.3</flightSpeedTurningPerTick>
 			<turnAnglePerTick>2</turnAnglePerTick>
