@@ -345,6 +345,20 @@
 			</landingFlecks>
 			<waypointFleck>CVN_WaypointMech7</waypointFleck>
 		</li>
+		<li Class="taranchuk_flightcombat.CompProperties_PawnDeployment">
+			<radius>10</radius>
+			<loadCommand>
+				<label>Load pawns</label>
+				<description>Load all nearby pawns into the vehicle.</description>
+				<texPath>UI/Abilities/Waterskip</texPath>
+			</loadCommand>
+			<unloadCommand>
+				<label>Unload vehicles</label>
+				<description>Unload all vehicles inside the vehicle.</description>
+				<texPath>UI/Abilities/Waterskip</texPath>
+			</unloadCommand>
+		</li>
+		
       <li Class="VehicleMechanitorControl.CompProperties_MechanitorControl">
 		<bandwidthGain>0</bandwidthGain>
 		<mechControlRange>0</mechControlRange>
