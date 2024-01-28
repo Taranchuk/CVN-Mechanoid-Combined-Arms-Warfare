@@ -357,6 +357,7 @@
 				<description>Unload all vehicles inside the vehicle.</description>
 				<texPath>UI/Abilities/Waterskip</texPath>
 			</unloadCommand>
+			<takePawnsOfAnyFaction>false</takePawnsOfAnyFaction>
 		</li>
 		
       <li Class="VehicleMechanitorControl.CompProperties_MechanitorControl">
