@@ -391,18 +391,7 @@
 		</components>
 
 		<comps>
-<li Class="Thek_HediffArea.CompProperties_HediffArea">
-<hediffToApplyFriendlyHumanlikes>cvnlove</hediffToApplyFriendlyHumanlikes>
-<hediffToApplyHostileHumanlikes>cvnlove</hediffToApplyHostileHumanlikes>
-<hediffToApplyFriendlyMechanoids>cvnlove</hediffToApplyFriendlyMechanoids>
-<hediffToApplyHostileMechanoids>cvnlove</hediffToApplyHostileMechanoids>
-<areaRange>20.8</areaRange>
-<appliesToFriendlies>true</appliesToFriendlies>
-<appliesToHostiles>true</appliesToHostiles>
-<mechanoidExclusive>false</mechanoidExclusive>
-<refreshRateInTicks>600</refreshRateInTicks>
-<severityOffset>0.02</severityOffset>
-      </li>
+
       <li Class="VehicleMechanitorControl.CompProperties_MechanitorControl">
 		<bandwidthGain>30</bandwidthGain>
 		<mechControlRange>50</mechControlRange>
