@@ -190,6 +190,7 @@
 		<bandwidthGain>0</bandwidthGain>
 		<mechControlRange>0</mechControlRange>
       </li>
+	  <li Class="taranchuk_flightcombat.CompProperties_LandingThrusters"></li>
       <li Class="CompProperties_OverseerSubject"></li>
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
