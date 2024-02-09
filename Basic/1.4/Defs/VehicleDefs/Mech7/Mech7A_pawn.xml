@@ -358,6 +358,7 @@
 				<texPath>UI/Abilities/Waterskip</texPath>
 			</unloadCommand>
 			<takePawnsOfAnyFaction>false</takePawnsOfAnyFaction>
+			<maxPawnMass>100</maxPawnMass>
 		</li>
 		
       <li Class="VehicleMechanitorControl.CompProperties_MechanitorControl">
