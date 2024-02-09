@@ -19,7 +19,9 @@
 			<speed>360</speed>
 			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
 		</projectile>
-
+		<modExtensions>
+			<li Class="taranchuk_flightcombat.AntiAirProjectile"></li>
+		</modExtensions>
 	</ThingDef>
 	
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
