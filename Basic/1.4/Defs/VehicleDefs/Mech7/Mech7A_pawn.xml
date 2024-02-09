@@ -346,7 +346,7 @@
 			<waypointFleck>CVN_WaypointMech7</waypointFleck>
 		</li>
 		<li Class="taranchuk_flightcombat.CompProperties_PawnDeployment">
-			<radius>10</radius>
+			<pickupAreaSize>(10, 5)</pickupAreaSize>
 			<loadCommand>
 				<label>Load pawns</label>
 				<description>Load all nearby pawns into the vehicle.</description>
