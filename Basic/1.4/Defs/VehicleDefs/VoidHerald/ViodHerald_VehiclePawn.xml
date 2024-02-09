@@ -422,33 +422,76 @@
 					<description>Toggle flight mode.</description>
 					<texPath>UI/Abilities/Waterskip</texPath>
 				</flightMode>
+				<hoverMode>
+					<label>Hover mode</label>
+					<description>Toggle hover mode.</description>
+					<texPath>UI/Abilities/Waterskip</texPath>
+				</hoverMode>
+				<faceTarget>
+					<label>Face target (hover)</label>
+					<description>Face target while hovering.</description>
+					<texPath>UI/Abilities/Waterskip</texPath>
+				</faceTarget>
+				<chaseTarget>
+					<label>Chase target (flight)</label>
+					<description>Chase target while flying.</description>
+					<texPath>UI/Abilities/Waterskip</texPath>
+				</chaseTarget>
 			</flightCommands>
-			<flightSpeedPerTick>0.2</flightSpeedPerTick>
-			<flightSpeedTurningPerTick>0.5</flightSpeedTurningPerTick>
+			<bombOptions>
+				<li>
+					<label>High Explosive bomb</label>
+					<texPath>Things/Projectile/ShellHighExplosive</texPath>
+					<costList>
+						<Steel>10</Steel>
+						<Chemfuel>20</Chemfuel>
+					</costList>
+					<projectile>CVN_BombHighExplosive</projectile>
+					<cooldownTicks>60</cooldownTicks>
+				</li>
+				<li>
+					<label>Incendionary bomb</label>
+					<texPath>Things/Projectile/ShellIncendiary</texPath>
+					<costList>
+						<Steel>10</Steel>
+						<Chemfuel>20</Chemfuel>
+					</costList>
+					<projectile>CVN_BombIncendiary</projectile>
+					<cooldownTicks>60</cooldownTicks>
+				</li>
+			</bombOptions>
+			<flightSpeedPerTick>0.4</flightSpeedPerTick>
+			<flightSpeedTurningPerTick>0.3</flightSpeedTurningPerTick>
 			<turnAnglePerTick>2</turnAnglePerTick>
 			<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick>
+			<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
 			<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
+			<takeoffTicks>300</takeoffTicks>
+			<landingTicks>300</landingTicks>
+			<moveWhileTakingOff>false</moveWhileTakingOff>
+			<runwayTerrainRequirements>
+				<li>Medium</li>
+				<li>Heavy</li>
+			</runwayTerrainRequirements>
 			<flightGraphicData>
 				<texPath>Things/Vehicles/VoidHerald/MothFlying</texPath>
 				<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 				<shaderType>CutoutComplexPattern</shaderType>
-				<drawSize>(13,13)</drawSize>
+				<drawSize>(15,15)</drawSize>
 				<drawRotated>true</drawRotated>
 				<color>(155, 155, 155)</color>
 			</flightGraphicData>
+			<flightFlecks>
+			</flightFlecks>
+			<hoverFlecks>
+				<!-- can be filled with the same data as the flight flecks if necessary -->
+			</hoverFlecks>
+			<takeoffFlecks>
+			</takeoffFlecks>
+			<landingFlecks>
+			</landingFlecks>
+			<waypointFleck>CVN_WaypointMech7</waypointFleck>
 		</li>
-	<li Class="Thek_HediffArea.CompProperties_HediffArea">
-	<hediffToApplyFriendlyHumanlikes>cvnlove</hediffToApplyFriendlyHumanlikes>
-	<hediffToApplyHostileHumanlikes>voidmiasmacrystal</hediffToApplyHostileHumanlikes>
-	<hediffToApplyFriendlyMechanoids>cvnlove</hediffToApplyFriendlyMechanoids>
-	<hediffToApplyHostileMechanoids>cvnlove</hediffToApplyHostileMechanoids>
-	<areaRange>20.8</areaRange>
-	<appliesToFriendlies>true</appliesToFriendlies>
-	<appliesToHostiles>true</appliesToHostiles>
-	<mechanoidExclusive>false</mechanoidExclusive>
-	<refreshRateInTicks>600</refreshRateInTicks>
-	<severityOffset>0.02</severityOffset>
-      </li>
     <li Class="CVN_CustomGameCondition.CompProperties_GameConditionTrigger">
         <gizmoName>Activate Void Shroud</gizmoName>
         <gizmoDesc>Causes the Void Herald to release large amounts of toxins which will slowly crystalize the landscape and those unprotected</gizmoDesc>
