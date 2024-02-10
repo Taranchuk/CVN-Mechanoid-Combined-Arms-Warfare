@@ -13,6 +13,7 @@
 			<drawSize>(7.5,7.5)</drawSize>
 			<drawRotated>true</drawRotated>
 			<color>(155, 155, 155)</color>
+			<layer>1</layer>
 		</graphicData>
 		<seeThroughFog>true</seeThroughFog>
 		<drawOffscreen>true</drawOffscreen>
@@ -269,6 +270,7 @@
 				<li>Heavy</li>
 			</runwayTerrainRequirements>
 			<flightGraphicData>
+			<layer>1</layer>
 				<texPath>Things/Vehicles/Overlords/CVNOVAdam</texPath>
 				<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 				<shaderType>CutoutComplexPattern</shaderType>
@@ -295,30 +297,30 @@
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
-						<turretDef>mech7mis</turretDef>
+						<turretDef>OVAdamRocketpod</turretDef>
 						
 						<renderProperties>
-							<north>(0, -0.5)</north>
-							<south>(0, 1)</south>
-							<east>(-0.5, 0)</east>
+							<north>(2, 2)</north>
+							<south>(-2, -2)</south>
+							<east>(2, -2)</east>
 						</renderProperties>
-						
-						<gizmoLabel>Main Turret</gizmoLabel>
+						<angleRestricted>-30, 30</angleRestricted>
+						<gizmoLabel>Right Rockets</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
 						<key>cannon2</key>
 					</li>
 					<li>
-						<turretDef>mech7mis</turretDef>
+						<turretDef>OVAdamRocketpod</turretDef>
 						
 						<renderProperties>
-							<north>(0, -0.5)</north>
-							<south>(0, 1)</south>
-							<east>(-0.5, 0)</east>
+							<north>(-2, 2)</north>
+							<south>(2, -2)</south>
+							<east>(2, 2)</east>
 						</renderProperties>
-						
-						<gizmoLabel>Main Turret</gizmoLabel>
+						<angleRestricted>-30, 30</angleRestricted>
+						<gizmoLabel>Left Rockets</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -332,7 +334,7 @@
 						<maxTicks>700</maxTicks>
 						<maxTicksVertical>300</maxTicksVertical>
 						<maxTicksPropeller>400</maxTicksPropeller>
-						<forcedRotation>East</forcedRotation>
+						<forcedRotation>North</forcedRotation>
 						
 						<lockShadowZ>true</lockShadowZ>
 						
