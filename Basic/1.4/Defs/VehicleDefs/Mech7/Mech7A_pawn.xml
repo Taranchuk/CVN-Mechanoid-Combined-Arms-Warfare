@@ -369,7 +369,7 @@
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
-						<turretDef>fuckgun</turretDef>
+						<turretDef>mech7mis</turretDef>
 						
 						<renderProperties>
 							<north>(1, 3.5)</north>
@@ -377,7 +377,6 @@
 							<east>(3.5, 0.1)</east>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
-						<angleRestricted>(330,10)</angleRestricted>
 						<gizmoLabel>Heavy Lasgun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
@@ -385,7 +384,7 @@
 						<key>lasgun2</key>
 					</li>
 					<li>
-						<turretDef>fuckgun</turretDef>
+						<turretDef>mech7mis</turretDef>
 						
 						<renderProperties>
 							<north>(-1, 3.5)</north>
@@ -393,7 +392,6 @@
 							<east>(3.5, -1.2)</east>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
-						<angleRestricted>(350,30)</angleRestricted>
 						<gizmoLabel>Heavy Lasgun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
@@ -401,7 +399,7 @@
 						<key>lasgun1</key>
 					</li>
 					<li>
-						<turretDef>fuckgun</turretDef>
+						<turretDef>mech7mis</turretDef>
 						
 						<renderProperties>
 							<north>(5.4, 1)</north>
@@ -409,7 +407,6 @@
 							<east>(1.5, -5.7)</east>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
-						<angleRestricted>(320,40)</angleRestricted>
 						<gizmoLabel>Heavy Boltor</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
@@ -417,7 +414,7 @@
 						<key>boltor2</key>
 					</li>
 					<li>
-						<turretDef>fuckgun</turretDef>
+						<turretDef>mech7mis</turretDef>
 						
 						<renderProperties>
 							<north>(-5.4, 1)</north>
@@ -425,7 +422,6 @@
 							<east>(1.5, 3.4)</east>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
-						<angleRestricted>(320,40)</angleRestricted>
 						<gizmoLabel>Heavy Boltor</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
