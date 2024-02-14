@@ -32,6 +32,7 @@
 				<initialSpreadAngle>20.5</initialSpreadAngle>
 				<tailMote>CVN_OrbMote</tailMote>
 				<effectLifetime>600</effectLifetime>
+				<effectSize>2</effectSize>
 			</li>
 		</comps>
 		<drawOffscreen>true</drawOffscreen>
