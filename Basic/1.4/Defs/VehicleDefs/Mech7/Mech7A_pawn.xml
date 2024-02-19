@@ -17,7 +17,7 @@
 		<seeThroughFog>true</seeThroughFog>
 		<drawOffscreen>true</drawOffscreen>
 		<fillPercent>1</fillPercent>
-		
+		<combatPower>300</combatPower>
 		<nameable>false</nameable>
 
 		<buildDef>CVNMechtek</buildDef>
@@ -227,6 +227,11 @@
 					<description>Face target while hovering.</description>
 					<texPath>UI/Abilities/Waterskip</texPath>
 				</faceTarget>
+				<cancelFaceTarget>
+					<label>Cancel face target</label>
+					<description>Cancel face target.</description>
+					<texPath>UI/Abilities/Waterskip</texPath>
+				</cancelFaceTarget>
 				<chaseTarget>
 					<label>Chase target (flight)</label>
 					<description>Chase target while flying.</description>
@@ -344,6 +349,25 @@
 				</li>
 			</landingFlecks>
 			<waypointFleck>CVN_WaypointMech7</waypointFleck>
+			<AISettings>
+				<bomberSettings>
+					<npcStock>
+						<Steel>100</Steel>
+						<Chemfuel>200</Chemfuel>
+					</npcStock>
+					<maxBombRun>1</maxBombRun>
+					<blacklistedBombs>
+						<li>CVN_BombIncendiary</li>
+					</blacklistedBombs>
+					<minRangeToStartBombing>5</minRangeToStartBombing>
+				</bomberSettings>
+				<gunshipSettings>
+					<npcStock>
+						<CVNAmmoMissile>60~120</CVNAmmoMissile>
+					</npcStock>
+					<gunshipMode>Chasing</gunshipMode>
+				</gunshipSettings>
+			</AISettings>
 		</li>
 		<li Class="taranchuk_flightcombat.CompProperties_PawnDeployment">
 			<pickupAreaSize>(10, 5)</pickupAreaSize>
