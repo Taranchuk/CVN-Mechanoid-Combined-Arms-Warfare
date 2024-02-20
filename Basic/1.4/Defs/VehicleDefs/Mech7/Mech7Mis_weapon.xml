@@ -12,7 +12,7 @@
 		
 		<projectile>Normmech7_missile</projectile>
 		<reloadTimer>15.5</reloadTimer>
-		<warmUpTimer>1.4</warmUpTimer>
+		<warmUpTimer>10.4</warmUpTimer>
 		
 		<magazineCapacity>30</magazineCapacity>
 		<genericAmmo>true</genericAmmo>
@@ -31,9 +31,9 @@
 		
 		<fireModes>
 			<li>
-				<shotsPerBurst>2</shotsPerBurst>
-				<ticksBetweenShots>5</ticksBetweenShots>
-				<ticksBetweenBursts>20</ticksBetweenBursts>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>1</ticksBetweenShots>
+				<ticksBetweenBursts>60</ticksBetweenBursts>
 				<spreadRadius>10</spreadRadius>
 				<label>Single</label>
 				<texPath>UI/Gizmos/FireRate_Single</texPath>
