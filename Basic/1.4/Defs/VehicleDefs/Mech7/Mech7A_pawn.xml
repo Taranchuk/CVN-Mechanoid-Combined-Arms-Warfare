@@ -350,6 +350,7 @@
 			</landingFlecks>
 			<waypointFleck>CVN_WaypointMech7</waypointFleck>
 			<AISettings>
+				<!--
 				<bomberSettings>
 					<npcStock>
 						<Steel>100</Steel>
@@ -359,13 +360,14 @@
 					<blacklistedBombs>
 						<li>CVN_BombIncendiary</li>
 					</blacklistedBombs>
-					<minRangeToStartBombing>5</minRangeToStartBombing>
-				</bomberSettings>
+					<distanceFromTarget>5</distanceFromTarget>
+				</bomberSettings>-->
 				<gunshipSettings>
 					<npcStock>
 						<CVNAmmoMissile>60~120</CVNAmmoMissile>
 					</npcStock>
-					<gunshipMode>Chasing</gunshipMode>
+					<gunshipMode>Hovering</gunshipMode>
+					<distanceFromTarget>30</distanceFromTarget>
 				</gunshipSettings>
 			</AISettings>
 		</li>
