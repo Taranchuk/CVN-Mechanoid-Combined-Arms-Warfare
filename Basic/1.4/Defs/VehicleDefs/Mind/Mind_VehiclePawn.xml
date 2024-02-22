@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
+
 	<Vehicles.VehicleDef ParentName="BaseVehiclePawn">
 		<defName>CVN_Mind</defName>
 		<label>Mind</label>
@@ -21,7 +22,6 @@
 
 		<size>(3, 13)</size>
 		
-		<vehicleMovementPermissions LockSetting = "True">NotAllowed</vehicleMovementPermissions>
 		<canCaravan LockSetting = "True">false</canCaravan>
 		<vehicleCategory>Transport</vehicleCategory>
 		<techLevel>Industrial</techLevel>
@@ -37,7 +37,7 @@
 		
 		<vehicleStats>
 			<Mass>780</Mass>
-			<MoveSpeed LockSetting = "True">0</MoveSpeed>
+			<MoveSpeed LockSetting = "True">10</MoveSpeed>
 			<CargoCapacity>780</CargoCapacity>
 			<RepairRate>1</RepairRate>
 			<FlightSpeed>9.95</FlightSpeed>
@@ -426,7 +426,8 @@
 			<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
 			<takeoffTicks>300</takeoffTicks>
 			<landingTicks>300</landingTicks>
-			<moveWhileTakingOff>true</moveWhileTakingOff>
+			<moveWhileTakingOff>false</moveWhileTakingOff>
+			<moveWhileLanding>true</moveWhileLanding>
 			<runwayTerrainRequirements>
 				<li>Medium</li>
 				<li>Heavy</li>
