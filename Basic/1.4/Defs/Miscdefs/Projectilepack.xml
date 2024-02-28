@@ -29,6 +29,7 @@
 			<li Class="taranchuk_homingprojectiles.CompProperties_HomingProjectile">
 				<tickRate>10</tickRate>
 				<lifetimeTicks>30000</lifetimeTicks>
+				<delayTurnInTicks>120</delayTurnInTicks>
 				<initialSpreadAngle>20.5</initialSpreadAngle>
 				<tailMote>CVN_OrbMote</tailMote>
 				<effectLifetime>600</effectLifetime>
