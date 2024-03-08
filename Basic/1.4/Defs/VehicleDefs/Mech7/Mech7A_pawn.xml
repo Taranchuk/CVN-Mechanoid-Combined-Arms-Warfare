@@ -210,6 +210,28 @@
 		</components>
 		
 		<comps>	
+		
+		<li Class="taranchuk_nomadcrafting.CompProperties_NomadCrafting">
+			<craftingSpeed>2</craftingSpeed>
+			<recipes>
+				<li>CVN_Militor</li>
+				<li>CVN_ResurrectLightMech</li>
+				<li>Make_ComponentIndustrial</li>
+				<li>Make_ChemfuelFromOrganics</li>
+			</recipes>
+			<!--
+			<pullRecipesFrom>
+				<li>FabricationBench</li>
+				<li>TableMachining</li>
+			</pullRecipesFrom>
+			-->
+			<qualityRange>
+				<li>Excellent</li>
+				<li>Masterwork</li>
+			</qualityRange>
+			<countOfBillsProcessed>3</countOfBillsProcessed>
+		</li>
+		
 		<li Class="taranchuk_flightcombat.CompProperties_FlightMode">
 			<flightCommands>
 				<flightMode>
@@ -392,7 +414,6 @@
 			<takePawnsOfAnyFaction>false</takePawnsOfAnyFaction>
 			<maxPawnMass>100</maxPawnMass>
 		</li>
-		
       <li Class="VehicleMechanitorControl.CompProperties_MechanitorControl">
 		<bandwidthGain>0</bandwidthGain>
 		<mechControlRange>0</mechControlRange>
