@@ -215,6 +215,11 @@
 		<mechControlRange>0</mechControlRange>
       </li>
       <li Class="CompProperties_OverseerSubject"></li>
+	  <li Class="taranchuk_vehicleabilities.CompProperties_Abilities">
+		<abilities>
+			<li>CVN_Burrow</li>
+		</abilities>
+	  </li>
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
