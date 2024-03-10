@@ -20,7 +20,10 @@
 			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
 		</projectile>
 		<modExtensions>
-			<li Class="taranchuk_flightcombat.AntiAirProjectile"></li>
+			<li Class="taranchuk_flightcombat.ProjectileModes">
+				<antiAir>true</antiAir>
+				<ground>false</ground>
+			</li>
 		</modExtensions>
 	</ThingDef>
 	

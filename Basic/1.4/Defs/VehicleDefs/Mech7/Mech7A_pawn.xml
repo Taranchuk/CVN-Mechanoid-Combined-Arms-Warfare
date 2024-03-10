@@ -398,6 +398,8 @@
 					<distanceFromTarget>30</distanceFromTarget>
 				</gunshipSettings>
 			</AISettings>
+			
+			<damageMultiplierFromNonAntiAirProjectiles>0.01</damageMultiplierFromNonAntiAirProjectiles>
 		</li>
 		<li Class="taranchuk_flightcombat.CompProperties_PawnDeployment">
 			<pickupAreaSize>(10, 5)</pickupAreaSize>
