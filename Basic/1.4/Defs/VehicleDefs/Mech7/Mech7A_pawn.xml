@@ -35,8 +35,10 @@
 			<ArmorRating_Heat>2.0</ArmorRating_Heat>
 			<Flammability>0</Flammability>
 			<MarketValue>1535</MarketValue>
-		<BandwidthCost>8</BandwidthCost>
-		<ControlTakingTime>5</ControlTakingTime>
+			<MechBandwidth>10</MechBandwidth>
+			<MechControlGroups>3</MechControlGroups>
+			<BandwidthCost>8</BandwidthCost>
+			<ControlTakingTime>5</ControlTakingTime>
 		</statBases>
 		
 		<vehicleStats>
@@ -214,11 +216,13 @@
 		<li Class="taranchuk_nomadcrafting.CompProperties_NomadCrafting">
 			<craftingSpeed>2</craftingSpeed>
 			<recipes>
-				<li>CVN_Militor</li>
 				<li>CVN_ResurrectLightMech</li>
 				<li>Make_ComponentIndustrial</li>
 				<li>Make_ChemfuelFromOrganics</li>
 			</recipes>
+			<mechClassesToGestate>
+				<li>Light</li>
+			</mechClassesToGestate>
 			<!--
 			<pullRecipesFrom>
 				<li>FabricationBench</li>
@@ -419,10 +423,16 @@
       <li Class="VehicleMechanitorControl.CompProperties_MechanitorControl">
 		<bandwidthGain>0</bandwidthGain>
 		<mechControlRange>0</mechControlRange>
+		<canBeMechanitor>true</canBeMechanitor>
       </li>
 	  <li Class="taranchuk_vehicleabilities.CompProperties_Abilities">
 		<abilities>
 			<li>LongjumpMech</li>
+			<li>CVN_ControlMech</li>
+			<li>CVN_RepairMech</li>
+			<li>CVN_DisassembleMech</li>
+			<li>CVN_DisconnectMech</li>
+			<li>CVN_Ripscan</li>
 		</abilities>
 	  </li>
       <li Class="CompProperties_OverseerSubject"></li>
