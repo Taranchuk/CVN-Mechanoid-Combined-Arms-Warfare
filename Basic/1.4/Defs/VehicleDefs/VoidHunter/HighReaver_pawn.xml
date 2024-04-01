@@ -2,15 +2,15 @@
 
 <Defs>
 	<Vehicles.VehicleDef ParentName="BaseVehiclePawn">
-		<defName>HighReaver</defName>
-		<label>High Reaver</label>
+		<defName>CVNVoidhunter</defName>
+		<label>Void Hunter</label>
 		<description>A highly advanced mechanoid unit which uses powerful shock based weapons, only capable of holding two passengers for quick deployment \n\nThis unit uses only Mech High Energy Canisters to power it's weapon systems</description>
 		
 		<graphicData>
-			<texPath>Things/Vehicles/Highreaver/HighReaver</texPath>
+			<texPath>Things/Vehicles/VoidHunter/VoidHunter</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
-			<drawSize>(9,9)</drawSize>
+			<drawSize>(7,7)</drawSize>
 			<drawRotated>true</drawRotated>
 			<color>(155, 155, 155)</color>
 		</graphicData>
@@ -19,9 +19,9 @@
 		
 		<nameable>false</nameable>
 
-		<buildDef>CVNHighReaverbuild</buildDef>
+		<buildDef>CVNVoidhunterbuild</buildDef>
 
-		<size>(5,8)</size>
+		<size>(3,5)</size>
 		<uiIconScale>0.85</uiIconScale>
 		 <vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>
 		<vehicleCategory>Transport</vehicleCategory>
@@ -226,57 +226,31 @@
 					<description>Face target while hovering.</description>
 					<texPath>UI/Abilities/Waterskip</texPath>
 				</faceTarget>
-				<cancelFaceTarget>
-					<label>Cancel face target</label>
-					<description>Cancel face target.</description>
-					<texPath>UI/Abilities/Waterskip</texPath>
-				</cancelFaceTarget>
 				<chaseTarget>
 					<label>Chase target (flight)</label>
 					<description>Chase target while flying.</description>
 					<texPath>UI/Abilities/Waterskip</texPath>
 				</chaseTarget>
 			</flightCommands>
-			<bombOptions>
-				<li>
-					<label>High Explosive bomb</label>
-					<texPath>Things/Projectile/ShellHighExplosive</texPath>
-					<costList>
-						<Steel>10</Steel>
-						<Chemfuel>20</Chemfuel>
-					</costList>
-					<projectile>CVN_BombHighExplosive</projectile>
-					<cooldownTicks>60</cooldownTicks>
-				</li>
-				<li>
-					<label>Incendionary bomb</label>
-					<texPath>Things/Projectile/ShellIncendiary</texPath>
-					<costList>
-						<Steel>10</Steel>
-						<Chemfuel>20</Chemfuel>
-					</costList>
-					<projectile>CVN_BombIncendiary</projectile>
-					<cooldownTicks>60</cooldownTicks>
-				</li>
-			</bombOptions>
-			<flightSpeedPerTick>0.4</flightSpeedPerTick>
-			<flightSpeedTurningPerTick>0.3</flightSpeedTurningPerTick>
-			<turnAnglePerTick>2</turnAnglePerTick>
-			<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick>
-			<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
+			<flightSpeedPerTick>5.9</flightSpeedPerTick>
+			<flightSpeedTurningPerTick>5.6</flightSpeedTurningPerTick>
+			<turnAnglePerTick>6</turnAnglePerTick>
+			<turnAngleCirclingPerTick>5</turnAngleCirclingPerTick>
+			<distanceFromTargetToStartTurningChaseMode>15</distanceFromTargetToStartTurningChaseMode>
 			<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
 			<takeoffTicks>300</takeoffTicks>
 			<landingTicks>300</landingTicks>
 			<moveWhileTakingOff>true</moveWhileTakingOff>
 			<runwayTerrainRequirements>
+				<li>Light</li>
 				<li>Medium</li>
 				<li>Heavy</li>
 			</runwayTerrainRequirements>
 			<flightGraphicData>
-				<texPath>Things/Vehicles/Highreaver/HighReaver</texPath>
+				<texPath>Things/Vehicles/VoidHunter/VoidHunter</texPath>
 				<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 				<shaderType>CutoutComplexPattern</shaderType>
-				<drawSize>(11,11)</drawSize>
+				<drawSize>(12,12)</drawSize>
 				<drawRotated>true</drawRotated>
 				<color>(155, 155, 155)</color>
 			</flightGraphicData>
@@ -348,30 +322,13 @@
 				</li>
 			</landingFlecks>
 			<waypointFleck>CVN_WaypointMech7</waypointFleck>
-			<AISettings>
-				<gunshipSettings>
-					<npcStock>
-						<CVNAmmoRedstandard>60~120</CVNAmmoRedstandard>
-					</npcStock>
-					<gunshipMode>Chasing</gunshipMode>
-				</gunshipSettings>
-			</AISettings>
 		</li>
-		<li Class="taranchuk_flightcombat.CompProperties_PawnDeployment">
-			<pickupAreaSize>(10, 5)</pickupAreaSize>
-			<loadCommand>
-				<label>Load pawns</label>
-				<description>Load all nearby pawns into the vehicle.</description>
-				<texPath>UI/Abilities/Waterskip</texPath>
-			</loadCommand>
-			<unloadCommand>
-				<label>Unload vehicles</label>
-				<description>Unload all vehicles inside the vehicle.</description>
-				<texPath>UI/Abilities/Waterskip</texPath>
-			</unloadCommand>
-			<takePawnsOfAnyFaction>false</takePawnsOfAnyFaction>
-			<maxPawnMass>100</maxPawnMass>
-		</li>
+			<li Class="Vehicles.CompProperties_FueledTravel">
+				<fuelType>Chemfuel</fuelType>
+				<leakDef>Filth_Fuel</leakDef>
+				<fuelConsumptionRate>26.5</fuelConsumptionRate>
+				<fuelCapacity>300</fuelCapacity>
+			</li>
       <li Class="VehicleMechanitorControl.CompProperties_MechanitorControl">
 		<bandwidthGain>0</bandwidthGain>
 		<mechControlRange>0</mechControlRange>

@@ -56,7 +56,7 @@
 		<minRange>30</minRange>
 		<maxRange>900.0</maxRange>
 		
-		
+
 		<fireModes>
 			<li>
 				<shotsPerBurst>6</shotsPerBurst>
@@ -73,6 +73,7 @@
 			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<drawSize>(2, 2)</drawSize>
+			<layer>-1</layer>
 		</graphicData>
 		<ammunition>
 			<thingDefs>

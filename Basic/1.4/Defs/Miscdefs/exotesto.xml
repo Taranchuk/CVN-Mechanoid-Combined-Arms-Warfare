@@ -151,6 +151,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>microflameshells</defName>
+	<thingClass>taranchuk_projectiletrails.RocketWithTrails</thingClass>
     <label>exoflameshells</label>
     <graphicData>
       <texPath>Things/Projectile/LauncherShot</texPath>
@@ -158,15 +159,20 @@
       <shaderType>TransparentPostLight</shaderType>
       <color>(254,189,58)</color>
     </graphicData>
-    <thingClass>Projectile_Explosive</thingClass>
     <projectile>
+      			<flyOverhead>true</flyOverhead>
       <speed>60</speed>
       <damageDef>Flame</damageDef>
       <!-- Use default damage from explosion def -->
       <explosionRadius>1.8</explosionRadius>
-      <arcHeightFactor>2</arcHeightFactor>
+      <arcHeightFactor>20</arcHeightFactor>
       <shadowSize>0.6</shadowSize>
     </projectile>
+		<modExtensions>
+			<li Class="taranchuk_projectiletrails.RocketExtension">
+				<archHeightMultiplier>4</archHeightMultiplier>
+			</li>
+		</modExtensions>
   </ThingDef>
 
 

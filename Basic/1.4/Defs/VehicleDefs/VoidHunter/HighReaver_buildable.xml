@@ -2,15 +2,15 @@
 
 <Defs>
 	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
-		<defName>CVNMechtek</defName>
-		<label>Mech-7</label>
-		<description>The Mech-7 is a dropship designed to force it's way through high fire zones using it's quick charging high shield to protect the troops it deploys from artillery fire, capable of holding 20 units.\n\nThis unit's charge autocannon runs on low energy canisters, while it requires fresh missile hulls for it's shock missiles</description>
+		<defName>CVNVoidhunterbuild</defName>
+		<label>Void Reaver</label>
+		<description>A highly advanced mechanoid unit which uses powerful shock based weapons, only capable of holding two passengers for quick deployment \n\nThis unit uses only Mech High Energy Canisters to power it's weapon systems</description>
 		<designationCategory>Biotech</designationCategory>
 		
 		<graphicData>
-			<texPath>Things/Vehicles/Mechtek/Mechtek</texPath>
+			<texPath>Things/Vehicles/VoidHunter/VoidHunter</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(9, 9)</drawSize>
+			<drawSize>(5, 5)</drawSize>
 		</graphicData>
 		
 		<rotatable>true</rotatable>
@@ -36,7 +36,7 @@
 		</costList>
 		
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-		<thingToSpawn>Mechtek</thingToSpawn>
+		<thingToSpawn>CVNVoidhunter</thingToSpawn>
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>

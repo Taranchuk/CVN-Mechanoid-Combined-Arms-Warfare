@@ -28,7 +28,9 @@
 		</researchPrerequisites>
 		
 		<costList>
-			<M7Kit>1</M7Kit>
+			<CVNMechComposite>10</CVNMechComposite>
+			<ComponentIndustrial>15</ComponentIndustrial>
+			<SubcoreRegular>2</SubcoreRegular>
 		</costList>
 		
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>

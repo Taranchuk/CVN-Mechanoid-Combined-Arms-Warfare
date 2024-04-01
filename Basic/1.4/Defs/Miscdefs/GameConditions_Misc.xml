@@ -1,6 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+<ThingDef ParentName="SubcoreScannerBase">
+    <thingClass>MechanitorScannerAndHediffSpreader.Building_SubcoreScannerWithFilter</thingClass>
+    <defName>CVN_Mechripscanner</defName>
+    <label>mechanitor ripscanner</label>
+    <description>A pod with thousands of tissue probe injectors and an ultra-high-power vaporizing brain scanner, once a mechanitor rests here, their brain and the mechlink inside are scanned and rebuilt inside of the components for a subcore, creating a subserviant ai that is eerily self aware, you likely don't need to worry about this however safety locks ensure even if they wanted to oppose you, they won't be able to.\n\nSubcores are mechanoid brains and producing any mechanoind requires them, these Hive subcores are special, and could be used to create ultimate mechanoid leaders.</description>
+    <graphicData>
+      <texPath>Things/Building/Production/SubcoreRipscanner</texPath>
+    </graphicData>
+    <statBases>
+      <WorkToBuild>1200</WorkToBuild>
+      <MaxHitPoints>250</MaxHitPoints>
+    </statBases>
+    <costList>
+      <Steel>100</Steel>
+      <Plasteel>250</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <researchPrerequisites>
+      <li>HighMechtech</li>
+    </researchPrerequisites>
+    <building>
+      <subcoreScannerOutputDef>SubcoreHigh</subcoreScannerOutputDef>
+      <subcoreScannerStartEffect>SubcoreRipscanner_Start</subcoreScannerStartEffect>
+      <destroyBrain>true</destroyBrain>
+      <subcoreScannerWorking>SubcoreRipscanner_Working</subcoreScannerWorking>
+      <subcoreScannerComplete>SubcoreRipscanner_Complete</subcoreScannerComplete>
+    </building>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+  <modExtensions>
+    <li Class="MechanitorScannerAndHediffSpreader.ThingDefExtension_RequiredHediff">
+        <requiredHediff>MechlinkImplant</requiredHediff>
+    </li>
+
+  </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="SubcoreBase">
+    <defName>CVNMechanitorsubcore</defName>
+    <label>hive subcore</label>
+    <description>This subcore is the ultimate source of mechanoid consciousness, made by ripscanning a mechanitor, having their mechlink destroyed in the process as it is melded with the hive subcore the result however is a subcore with a semblance of a personality that can act independently of a mechanitor if required, this method was often used by Coventech mechanitors who wished to ascend, compared to a normal mechanitor a hive subcore using mechanoid is far superior.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/SubcoreHigh</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>5000</MarketValue>
+    </statBases>
+  </ThingDef>
+
  <GameConditionDef>
     <defName>CVNFallout</defName>
     <conditionClass>CVN_CustomGameCondition.GameCondition_CVNFallout</conditionClass>

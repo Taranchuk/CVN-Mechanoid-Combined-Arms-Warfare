@@ -28,7 +28,11 @@
 		</researchPrerequisites>
 		
 		<costList>
-			<HRKit>1</HRKit>
+			<CVNMechComposite>10</CVNMechComposite>
+			<ComponentIndustrial>35</ComponentIndustrial>
+			<ComponentSpacer>20</ComponentSpacer>
+			<SubcoreHigh>2</SubcoreHigh>
+			<NanostructuringChip>2</NanostructuringChip>
 		</costList>
 		
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>

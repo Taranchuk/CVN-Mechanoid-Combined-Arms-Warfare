@@ -81,7 +81,24 @@
 					<hitbox>
 						<side>Body</side>
 					</hitbox>
-					
+					<pawnRenderer>
+						<layerNorth>2</layerNorth>
+						<layerSouth>1</layerSouth>
+						<layerEast>-1</layerEast>
+						<layerWest>1</layerWest>
+
+						
+						<angleNorthEast>0</angleNorthEast>
+						<angleSouthEast>0</angleSouthEast>
+						<northEast>East</northEast>
+						<southEast>East</southEast>
+						<southWest>West</southWest>
+						<northWest>West</northWest>
+						
+						<drawOffsetNorth>(-0.7, 0, 2)</drawOffsetNorth>
+						<drawOffsetSouth>(0.7, 0, 2)</drawOffsetSouth>
+						<drawOffsetEast>(0.5, 0, 2)</drawOffsetEast>
+					</pawnRenderer>
 				</li>
 			</roles>
 		</properties>
@@ -403,7 +420,7 @@
 				</gunshipSettings>
 			</AISettings>
 			
-			<damageMultiplierFromNonAntiAirProjectiles>0.01</damageMultiplierFromNonAntiAirProjectiles>
+			<damageMultiplierFromNonAntiAirProjectiles>0.3</damageMultiplierFromNonAntiAirProjectiles>
 		</li>
 		<li Class="taranchuk_flightcombat.CompProperties_PawnDeployment">
 			<pickupAreaSize>(10, 5)</pickupAreaSize>
@@ -1025,9 +1042,6 @@
 					</landingProperties>
 				</launchProtocol>
 			</li>
-	<li Class="Thek_VFSpawner.CompProperties_RepackVehicle">
-	<thingDefSpawnedFromRepack>M7Kit</thingDefSpawnedFromRepack>
-	</li>
 		</comps>
 	</Vehicles.VehicleDef>
 </Defs>

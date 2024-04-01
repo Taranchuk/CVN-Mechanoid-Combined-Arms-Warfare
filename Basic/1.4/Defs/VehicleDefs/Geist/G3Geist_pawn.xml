@@ -2,28 +2,27 @@
 
 <Defs>
 	<Vehicles.VehicleDef ParentName="BaseVehiclePawn">
-		<defName>CVNOVJeff</defName>
-		<label>overlord:Jeff-Class</label>
+		<defName>CVNG3Geist</defName>
+		<label>G3 Geist</label>
 		<description>The Mech-7 is a dropship designed to force it's way through high fire zones using it's quick charging high shield to protect the troops it deploys from artillery fire, capable of holding 20 units.\n\nThis unit's charge autocannon runs on low energy canisters, while it requires fresh missile hulls for it's shock missiles</description>
 	
 		<graphicData>
-			<texPath>Things/Vehicles/Overlords/CVNOVJeff</texPath>
+			<texPath>Things/Vehicles/Geist/G3GeistLanded</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
-			<drawSize>(45,45)</drawSize>
+			<drawSize>(23,12)</drawSize>
 			<drawRotated>true</drawRotated>
-			<color>(255, 255, 255)</color>
-			<layer>1</layer>
+			<color>(155, 155, 155)</color>
 		</graphicData>
 		<seeThroughFog>true</seeThroughFog>
 		<drawOffscreen>true</drawOffscreen>
 		<fillPercent>1</fillPercent>
-		
+		<combatPower>2000</combatPower>
 		<nameable>false</nameable>
 
-		<buildDef>CVNOVJeff_blueprint</buildDef>
+		<buildDef>CVNG3Geist_Buildable</buildDef>
 
-		<size>(19,43)</size>
+		<size>(7,9)</size>
 		<uiIconScale>0.85</uiIconScale>
 		
 		<vehicleCategory>Transport</vehicleCategory>
@@ -36,7 +35,7 @@
 			<ArmorRating_Heat>2.0</ArmorRating_Heat>
 			<Flammability>0</Flammability>
 			<MarketValue>1535</MarketValue>
-		<BandwidthCost>1</BandwidthCost>
+		<BandwidthCost>8</BandwidthCost>
 		<ControlTakingTime>5</ControlTakingTime>
 		</statBases>
 		
@@ -75,7 +74,7 @@
 				<li>
 					<key>passenger</key>
 					<label>Passenger</label>
-					<slots>2</slots>
+					<slots>20</slots>
 					
 					<hitbox>
 						<side>Body</side>
@@ -228,6 +227,11 @@
 					<description>Face target while hovering.</description>
 					<texPath>UI/Abilities/Waterskip</texPath>
 				</faceTarget>
+				<cancelFaceTarget>
+					<label>Cancel face target</label>
+					<description>Cancel face target.</description>
+					<texPath>UI/Abilities/Waterskip</texPath>
+				</cancelFaceTarget>
 				<chaseTarget>
 					<label>Chase target (flight)</label>
 					<description>Chase target while flying.</description>
@@ -242,7 +246,7 @@
 						<Steel>10</Steel>
 						<Chemfuel>20</Chemfuel>
 					</costList>
-					<projectile>CVN_BombHighExplosive</projectile>
+					<projectile>CVN_ShockBomb</projectile>
 					<cooldownTicks>60</cooldownTicks>
 				</li>
 				<li>
@@ -256,39 +260,142 @@
 					<cooldownTicks>60</cooldownTicks>
 				</li>
 			</bombOptions>
-			<flightSpeedPerTick>0.1</flightSpeedPerTick>
+			<flightSpeedPerTick>0.4</flightSpeedPerTick>
 			<flightSpeedTurningPerTick>0.3</flightSpeedTurningPerTick>
-			<turnAnglePerTick>1</turnAnglePerTick>
+			<turnAnglePerTick>2</turnAnglePerTick>
 			<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick>
 			<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
 			<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
 			<takeoffTicks>300</takeoffTicks>
 			<landingTicks>300</landingTicks>
-			<moveWhileTakingOff>false</moveWhileTakingOff>
+			<moveWhileTakingOff>true</moveWhileTakingOff>
 			<runwayTerrainRequirements>
 				<li>Medium</li>
 				<li>Heavy</li>
 			</runwayTerrainRequirements>
 			<flightGraphicData>
-				<texPath>Things/Vehicles/Overlords/CVNOVJeff</texPath>
+				<texPath>Things/Vehicles/Geist/G3GeistFlight</texPath>
 				<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 				<shaderType>CutoutComplexPattern</shaderType>
-				<drawSize>(45,45)</drawSize>
+				<drawSize>(23,12)</drawSize>
 				<drawRotated>true</drawRotated>
 				<color>(255, 255, 255)</color>
-			<layer>1</layer>
 			</flightGraphicData>
 			<flightFlecks>
+				<li>
+					<fleck>CVN_RocketExhaust</fleck>
+					<solidTime>0.20</solidTime>
+					<velocitySpeed>0</velocitySpeed>
+					<position>(-4.5, 0, 1)</position>
+					<angleOffset>0</angleOffset>
+					<spawnTickRate>1</spawnTickRate>
+					<scale>1</scale>
+				</li>
+				<li>
+					<fleck>CVN_RocketExhaust</fleck>
+					<solidTime>0.20</solidTime>
+					<velocitySpeed>0</velocitySpeed>
+					<position>(-4.5, 0, -1)</position>
+					<angleOffset>0</angleOffset>
+					<spawnTickRate>1</spawnTickRate>
+					<scale>1</scale>
+				</li>
 			</flightFlecks>
 			<hoverFlecks>
 				<!-- can be filled with the same data as the flight flecks if necessary -->
 			</hoverFlecks>
 			<takeoffFlecks>
+				<li>
+					<fleck>CVN_RocketExhaust</fleck>
+					<solidTime>0.20</solidTime>
+					<solidTimeScaleByTakeoffInverse>true</solidTimeScaleByTakeoffInverse>
+					<velocitySpeed>0</velocitySpeed>
+					<position>(-4.5, 0, 1)</position>
+					<angleOffset>0</angleOffset>
+					<spawnTickRate>1</spawnTickRate>
+					<scale>1</scale>
+				</li>
+				<li>
+					<fleck>CVN_RocketExhaust</fleck>
+					<solidTime>0.20</solidTime>
+					<solidTimeScaleByTakeoffInverse>true</solidTimeScaleByTakeoffInverse>
+					<velocitySpeed>0</velocitySpeed>
+					<position>(-4.5, 0, -1)</position>
+					<angleOffset>0</angleOffset>
+					<spawnTickRate>1</spawnTickRate>
+					<scale>1</scale>
+				</li>
 			</takeoffFlecks>
 			<landingFlecks>
+				<li>
+					<fleck>CVN_RocketExhaust</fleck>
+					<solidTime>0.20</solidTime>
+					<solidTimeScaleByTakeoff>true</solidTimeScaleByTakeoff>
+					<velocitySpeed>0</velocitySpeed>
+					<position>(-4.5, 0, 1)</position>
+					<angleOffset>0</angleOffset>
+					<spawnTickRate>1</spawnTickRate>
+					<scale>1</scale>
+				</li>
+				<li>
+					<fleck>CVN_RocketExhaust</fleck>
+					<solidTime>0.20</solidTime>
+					<solidTimeScaleByTakeoff>true</solidTimeScaleByTakeoff>
+					<velocitySpeed>0</velocitySpeed>
+					<position>(-4.5, 0, -1)</position>
+					<angleOffset>0</angleOffset>
+					<spawnTickRate>1</spawnTickRate>
+					<scale>1</scale>
+				</li>
 			</landingFlecks>
 			<waypointFleck>CVN_WaypointMech7</waypointFleck>
+			<AISettings>
+				<bomberSettings>
+					<npcStock>
+						<Steel>900</Steel>
+						<Chemfuel>900</Chemfuel>
+					</npcStock>
+					<maxBombRun>9</maxBombRun>
+					<blacklistedBombs>
+						<li>CVN_BombIncendiary</li>
+					</blacklistedBombs>
+					<distanceFromTarget>5</distanceFromTarget>
+				</bomberSettings>
+				<gunshipSettings>
+					<npcStock>
+						<CVNAmmoMissile>60~120</CVNAmmoMissile>
+					</npcStock>
+					<gunshipMode>Chasing</gunshipMode>
+					<distanceFromTarget>30</distanceFromTarget>
+				</gunshipSettings>
+			</AISettings>
 		</li>
+		<li Class="taranchuk_flightcombat.CompProperties_PawnDeployment">
+			<pickupAreaSize>(10, 5)</pickupAreaSize>
+			<loadCommand>
+				<label>Load pawns</label>
+				<description>Load all nearby pawns into the vehicle.</description>
+				<texPath>UI/Abilities/Waterskip</texPath>
+			</loadCommand>
+			<unloadCommand>
+				<label>Unload vehicles</label>
+				<description>Unload all vehicles inside the vehicle.</description>
+				<texPath>UI/Abilities/Waterskip</texPath>
+			</unloadCommand>
+			<takePawnsOfAnyFaction>false</takePawnsOfAnyFaction>
+			<maxPawnMass>100</maxPawnMass>
+		</li>
+		
+      <li Class="VehicleMechanitorControl.CompProperties_MechanitorControl">
+		<bandwidthGain>0</bandwidthGain>
+		<mechControlRange>0</mechControlRange>
+      </li>
+	  <li Class="taranchuk_vehicleabilities.CompProperties_Abilities">
+		<abilities>
+			<li>LongjumpMech</li>
+		</abilities>
+	  </li>
+		
       <li Class="VehicleMechanitorControl.CompProperties_MechanitorControl">
 		<bandwidthGain>0</bandwidthGain>
 		<mechControlRange>0</mechControlRange>
@@ -296,87 +403,44 @@
       <li Class="CompProperties_OverseerSubject"></li>
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
-                    <li>
-                        <turretDef>OVJeffCWIS</turretDef>
-                        
-                        <renderProperties>
-                            <north>(3.5, 4)</north>
-                            <south>(0, 1)</south>
-                            <east>(3.5, 4)</east>
-                        </renderProperties>
-                        
-                        <gizmoLabel>Main Turret</gizmoLabel>
-                        
-                        <aimPieOffset>(0, 0.55)</aimPieOffset>
-                        
-                        <key>cannon2</key>
-                    </li>
-                    <li>
-                        <turretDef>OVJeffCWIS</turretDef>
-                        
-                        <renderProperties>
-                            <north>(-3.5, 4)</north>
-                            <south>(0, 1)</south>
-                            <east>(3.5, -4)</east>
-                        </renderProperties>
-                        
-                        <gizmoLabel>Main Turret</gizmoLabel>
-                        
-                        <aimPieOffset>(0, 0.55)</aimPieOffset>
-                        
-                        <key>cannon3</key>
-                    </li>
-                    <li>
-                        <turretDef>OVJeffRailgun</turretDef>
-                        
-                        <renderProperties>
-                            <north>(0, 20)</north>
-                            <south>(0, 1)</south>
-                            <east>(21, 0)</east>
-                        </renderProperties>
-                        
-                        <gizmoLabel>Main Turret</gizmoLabel>
-                        
-                        <aimPieOffset>(0, 0.55)</aimPieOffset>
-                        
-                        <key>cannon4</key>
-                    </li>
-                    <li>
-                        <turretDef>OVJeffRailgun</turretDef>
-                        
-                        <renderProperties>
-                            <north>(7, -8)</north>
-                            <south>(0, 1)</south>
-                            <east>(-7, -8)</east>
-                        </renderProperties>
-                        
-                        <gizmoLabel>Main Turret</gizmoLabel>
-                        
-                        <aimPieOffset>(0, 0.55)</aimPieOffset>
-                        
-                        <key>cannon5</key>
-                    </li>
-                    <li>
-                        <turretDef>OVJeffRailgun</turretDef>
-                        
-                        <renderProperties>
-                            <north>(-7, -8)</north>
-                            <south>(0, 1)</south>
-                            <east>(-8, 7)</east>
-                        </renderProperties>
-                        
-                        <gizmoLabel>Main Turret</gizmoLabel>
-                        
-                        <aimPieOffset>(0, 0.55)</aimPieOffset>
-                        
-                        <key>cannon1</key>
-                    </li>
-                </turrets>
+					<li>
+						<turretDef>fuckgun</turretDef>
+						
+						<renderProperties>
+							<north>(1, 3.5)</north>
+							<south>(1, -3.5)</south>
+							<east>(3.5, 0.1)</east>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(330,10)</angleRestricted>
+						<gizmoLabel>Heavy Lasgun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>lasgun2</key>
+					</li>
+					<li>
+						<turretDef>fuckgun</turretDef>
+						
+						<renderProperties>
+							<north>(-1, 3.5)</north>
+							<south>(-1, -3.5)</south>
+							<east>(3.5, -1.2)</east>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(350,30)</angleRestricted>
+						<gizmoLabel>Heavy Lasgun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>lasgun1</key>
+					</li>
+				</turrets>
 			</li>
 			<li Class="Vehicles.CompProperties_VehicleLauncher">
 				<launchProtocol Class="Vehicles.PropellerTakeoff">
 					<launchProperties Class = "Vehicles.PropellerProtocolProperties">
-						<maxTicks>700</maxTicks>
+						<maxTicks>500</maxTicks>
 						<maxTicksVertical>300</maxTicksVertical>
 						<maxTicksPropeller>400</maxTicksPropeller>
 						<forcedRotation>East</forcedRotation>

@@ -36,8 +36,10 @@
 			<ArmorRating_Heat>2.0</ArmorRating_Heat>
 			<Flammability>0</Flammability>
 			<MarketValue>1535</MarketValue>
-		<BandwidthCost>1</BandwidthCost>
-		<ControlTakingTime>5</ControlTakingTime>
+			<MechBandwidth>10</MechBandwidth>
+			<MechControlGroups>3</MechControlGroups>
+			<BandwidthCost>8</BandwidthCost>
+			<ControlTakingTime>5</ControlTakingTime>
 		</statBases>
 		
 		<vehicleStats>
@@ -291,9 +293,20 @@
 		</li>
       <li Class="VehicleMechanitorControl.CompProperties_MechanitorControl">
 		<bandwidthGain>0</bandwidthGain>
-		<mechControlRange>0</mechControlRange>
+		<mechControlRange>20</mechControlRange>
+		<canBeMechanitor>true</canBeMechanitor>
       </li>
       <li Class="CompProperties_OverseerSubject"></li>
+	  <li Class="taranchuk_vehicleabilities.CompProperties_Abilities">
+		<abilities>
+			<li>LongjumpMech</li>
+			<li>CVN_ControlMech</li>
+			<li>CVN_RepairMech</li>
+			<li>CVN_DisassembleMech</li>
+			<li>CVN_DisconnectMech</li>
+			<li>CVN_Ripscan</li>
+		</abilities>
+	  </li>
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
@@ -853,9 +866,7 @@
 					</landingProperties>
 				</launchProtocol>
 			</li>
-	<li Class="Thek_VFSpawner.CompProperties_RepackVehicle">
-	<thingDefSpawnedFromRepack>M7Kit</thingDefSpawnedFromRepack>
-	</li>
+
 		</comps>
 	</Vehicles.VehicleDef>
 </Defs>
