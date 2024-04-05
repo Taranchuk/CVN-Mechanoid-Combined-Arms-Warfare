@@ -518,7 +518,7 @@
 					<blacklistedBombs>
 						<li>CVN_BombIncendiary</li>
 					</blacklistedBombs>
-					<minRangeToStartBombing>5</minRangeToStartBombing>
+					<distanceFromTarget>5</distanceFromTarget>
 				</bomberSettings>
 				<gunshipSettings>
 					<npcStock>

@@ -438,7 +438,7 @@
 			<maxPawnMass>100</maxPawnMass>
 		</li>
       <li Class="VehicleMechanitorControl.CompProperties_MechanitorControl">
-		<bandwidthGain>0</bandwidthGain>
+		<bandwidthGain>5</bandwidthGain>
 		<mechControlRange>0</mechControlRange>
 		<canBeMechanitor>true</canBeMechanitor>
       </li>
@@ -452,7 +452,6 @@
 			<li>CVN_Ripscan</li>
 		</abilities>
 	  </li>
-      <li Class="CompProperties_OverseerSubject"></li>
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
