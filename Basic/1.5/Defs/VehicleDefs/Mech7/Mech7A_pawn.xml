@@ -438,7 +438,7 @@
 			<maxPawnMass>100</maxPawnMass>
 		</li>
       <li Class="VehicleMechanitorControl.CompProperties_MechanitorControl">
-		<bandwidthGain>5</bandwidthGain>
+		<bandwidthGain>0</bandwidthGain>
 		<mechControlRange>0</mechControlRange>
 		<canBeMechanitor>true</canBeMechanitor>
       </li>
