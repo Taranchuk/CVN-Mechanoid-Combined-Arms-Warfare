@@ -46,19 +46,6 @@
 			<FlightSpeed>190</FlightSpeed>
 		</vehicleStats>
 		
-		<soundOneShotsOnEvent>
-			<li>
-				<key>AerialVehicleLaunch</key>
-				<value>DropPod_Leaving</value>
-			</li>
-		</soundOneShotsOnEvent>
-		
-		<soundSustainersOnEvent>
-			<li>
-				<key>(AerialVehicleLanding, Spawned)</key>
-				<value>DropPod_Fall</value>
-			</li>
-		</soundSustainersOnEvent>
 		
 		<race>
 			<baseBodySize>1.5</baseBodySize>
@@ -216,6 +203,12 @@
 					<description>Toggle flight mode.</description>
 					<texPath>UI/Abilities/Waterskip</texPath>
 				</flightMode>
+				<!-- WIP feature. Didn't manage to achieve fully autonomous landing, but maybe can be finished later
+				<landOnGround>
+					<label>Land on ground</label>
+					<description>Designate a landing plan. Select an endpoint of the runway and a starting point for landing.</description>
+					<texPath>UI/Abilities/Waterskip</texPath>
+				</landOnGround> -->
 				<hoverMode>
 					<label>Hover mode</label>
 					<description>Toggle hover mode.</description>
@@ -273,7 +266,7 @@
 				<li>Heavy</li>
 			</runwayTerrainRequirements>
 			<flightGraphicData>
-				<texPath>Things/Vehicles/Highreaver/HighReaver</texPath>
+				<texPath>Things/Vehicles/Mechtek/Mechtek</texPath>
 				<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 				<shaderType>CutoutComplexPattern</shaderType>
 				<drawSize>(11,11)</drawSize>
@@ -349,13 +342,28 @@
 			</landingFlecks>
 			<waypointFleck>CVN_WaypointMech7</waypointFleck>
 			<AISettings>
+				<!--
+				<bomberSettings>
+					<npcStock>
+						<Steel>100</Steel>
+						<Chemfuel>200</Chemfuel>
+					</npcStock>
+					<maxBombRun>1</maxBombRun>
+					<blacklistedBombs>
+						<li>CVN_BombIncendiary</li>
+					</blacklistedBombs>
+					<distanceFromTarget>5</distanceFromTarget>
+				</bomberSettings>-->
 				<gunshipSettings>
 					<npcStock>
-						<CVNAmmoRedstandard>60~120</CVNAmmoRedstandard>
+						<CVNAmmoMissile>60~120</CVNAmmoMissile>
 					</npcStock>
-					<gunshipMode>Chasing</gunshipMode>
+					<gunshipMode>Hovering</gunshipMode>
+					<distanceFromTarget>30</distanceFromTarget>
 				</gunshipSettings>
 			</AISettings>
+			
+			<damageMultiplierFromNonAntiAirProjectiles>0.3</damageMultiplierFromNonAntiAirProjectiles>
 		</li>
 		<li Class="taranchuk_flightcombat.CompProperties_PawnDeployment">
 			<pickupAreaSize>(10, 5)</pickupAreaSize>
@@ -380,7 +388,7 @@
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
-						<turretDef>HRgatty</turretDef>
+						<turretDef>HRHighbeam</turretDef>
 						
 						<renderProperties>
 							<north>(0, -0.5)</north>
