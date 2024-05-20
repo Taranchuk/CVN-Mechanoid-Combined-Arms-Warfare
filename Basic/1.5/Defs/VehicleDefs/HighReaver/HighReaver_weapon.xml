@@ -44,26 +44,22 @@
 		</projectile>
 		<modExtensions>
 			<li Class="taranchuk_lasers.LaserProperties">
-				<damageTickRate>30</damageTickRate>
+				<damageTickRate>20</damageTickRate>
 				<lifetimeTicks>600</lifetimeTicks>
 				<beamWidth>1.5</beamWidth>
 				<beamWidthDrawScale>3</beamWidthDrawScale>
-				<!--
 				<sweepRatePerTick>0.5</sweepRatePerTick>
 				<maxSweepAngle>7</maxSweepAngle>
-				-->
 				<damageThingsAcrossBeamLine>false</damageThingsAcrossBeamLine>
 				<debugCells>false</debugCells>
 				<groundFleckDef>Fleck_BeamBurn</groundFleckDef>
 				<endEffecterDef>GraserBeam_End</endEffecterDef>
 				<fleckChancePerTick>0.32</fleckChancePerTick>
-				<!--
 				<explosionOnEnd>Bomb</explosionOnEnd>
 				<explosionSpeed>1</explosionSpeed>
 				<explosionRadius>1.1</explosionRadius>
-				-->
 				<textureScrollOffsetPerTick>(0, -0.1)</textureScrollOffsetPerTick>
-				<lockOnTarget>false</lockOnTarget>
+				<lockOnTarget>true</lockOnTarget>
 			</li>
 		</modExtensions>
 	</ThingDef>
