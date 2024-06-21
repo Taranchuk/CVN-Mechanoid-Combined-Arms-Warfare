@@ -20,7 +20,7 @@
 		
 		<buildDef>CVN_MBT_blueprint</buildDef>
 		
-		<size>(3, 4</size>
+		<size>(3, 4)</size>
 
 		<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>
 		<vehicleCategory>Combat</vehicleCategory>

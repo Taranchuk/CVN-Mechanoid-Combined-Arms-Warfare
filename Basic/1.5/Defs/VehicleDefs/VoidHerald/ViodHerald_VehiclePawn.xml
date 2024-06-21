@@ -517,6 +517,12 @@
         <rechargeHitPointsIntervalTicks>120</rechargeHitPointsIntervalTicks>
         <minIdleAlpha>0.2</minIdleAlpha>
       </li>
+<li Class="MechanitorScannerAndHediffSpreader.CompProperties_HediffAura">
+        <ownerFactionHediff>cvnlove</ownerFactionHediff>
+        <severityPerTrigger>0.05</severityPerTrigger>
+        <radius>100</radius>
+	<tickInterval>600</tickInterval>
+      </li>
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>

@@ -42,7 +42,7 @@
 		<reloadTimer>10.0</reloadTimer>
 		<warmUpTimer>1.0</warmUpTimer>
 		
-		<magazineCapacity>3</magazineCapacity>
+		<magazineCapacity>6</magazineCapacity>
 		<genericAmmo>true</genericAmmo>
 		
 		<hitFlags>None</hitFlags>
@@ -53,7 +53,7 @@
 		<projectileOffset>1.0</projectileOffset>
 		
 		<minRange>5</minRange>
-		<maxRange>30.0</maxRange>
+		<maxRange>40.0</maxRange>
 		
 		
 		<fireModes>

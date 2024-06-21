@@ -36,28 +36,25 @@
 			<drawSize>1.5</drawSize>
 		</graphicData>
 		<projectile>
-			<damageDef>CVNmoleculardmg</damageDef>
-			<damageAmountBase>1</damageAmountBase>
-			<armorPenetrationBase>2</armorPenetrationBase>
+			<damageDef>Flame</damageDef>
+			<damageAmountBase>5</damageAmountBase>
+			<armorPenetrationBase>1</armorPenetrationBase>
 			<stoppingPower>5</stoppingPower>
 			<speed>10000</speed>
 		</projectile>
 		<modExtensions>
 			<li Class="taranchuk_lasers.LaserProperties">
-				<damageTickRate>20</damageTickRate>
-				<lifetimeTicks>600</lifetimeTicks>
+				<damageTickRate>7</damageTickRate>
+				<lifetimeTicks>150</lifetimeTicks>
 				<beamWidth>1.5</beamWidth>
 				<beamWidthDrawScale>3</beamWidthDrawScale>
-				<sweepRatePerTick>0.5</sweepRatePerTick>
-				<maxSweepAngle>7</maxSweepAngle>
+				<sweepRatePerTick>0</sweepRatePerTick>
+				<maxSweepAngle>0</maxSweepAngle>
 				<damageThingsAcrossBeamLine>false</damageThingsAcrossBeamLine>
 				<debugCells>false</debugCells>
 				<groundFleckDef>Fleck_BeamBurn</groundFleckDef>
 				<endEffecterDef>GraserBeam_End</endEffecterDef>
 				<fleckChancePerTick>0.32</fleckChancePerTick>
-				<explosionOnEnd>Bomb</explosionOnEnd>
-				<explosionSpeed>1</explosionSpeed>
-				<explosionRadius>1.1</explosionRadius>
 				<textureScrollOffsetPerTick>(0, -0.1)</textureScrollOffsetPerTick>
 				<lockOnTarget>true</lockOnTarget>
 			</li>
@@ -94,8 +91,8 @@
 		<fireModes>
 			<li>
 				<shotsPerBurst>1</shotsPerBurst>
-				<ticksBetweenShots>2</ticksBetweenShots>
-				<ticksBetweenBursts>260</ticksBetweenBursts>
+				<ticksBetweenShots>20</ticksBetweenShots>
+				<ticksBetweenBursts>200</ticksBetweenBursts>
 				<spreadRadius>2</spreadRadius>
 				<label>Burst</label>
 				<texPath>UI/Gizmos/FireRate_Single</texPath>
@@ -111,7 +108,7 @@
 		
 		<ammunition>
 			<thingDefs>
-				<li>CVNAmmoRedstandard</li>
+				<li>CVNAmmoBluestandard</li>
 			</thingDefs>
 		</ammunition>
 	</Vehicles.VehicleTurretDef>

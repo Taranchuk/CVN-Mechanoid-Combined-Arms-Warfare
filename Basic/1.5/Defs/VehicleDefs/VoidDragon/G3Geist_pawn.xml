@@ -2,27 +2,26 @@
 
 <Defs>
 	<Vehicles.VehicleDef ParentName="BaseVehiclePawn">
-		<defName>Mechtek</defName>
-		<label>Mech-7</label>
+		<defName>CVNVoidDragonDead</defName>
+		<label>Void Scourge Dragon</label>
 		<description>The Mech-7 is a dropship designed to force it's way through high fire zones using it's quick charging high shield to protect the troops it deploys from artillery fire, capable of holding 20 units.\n\nThis unit's charge autocannon runs on low energy canisters, while it requires fresh missile hulls for it's shock missiles</description>
 	
 		<graphicData>
-			<texPath>Things/Vehicles/Mechtek/Mechtek</texPath>
+			<texPath>Things/Vehicles/VoidDragon/Dragon</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
-			<drawSize>(9,9)</drawSize>
+			<drawSize>(18,18)</drawSize>
 			<drawRotated>true</drawRotated>
-			<color>(155, 155, 155)</color>
 		</graphicData>
 		<seeThroughFog>true</seeThroughFog>
 		<drawOffscreen>true</drawOffscreen>
 		<fillPercent>1</fillPercent>
-		<combatPower>300</combatPower>
+		<combatPower>2000</combatPower>
 		<nameable>false</nameable>
 
-		<buildDef>CVNMechtek</buildDef>
+		<buildDef>CVNVoidDragonDead_Buildable</buildDef>
 
-		<size>(4,8)</size>
+		<size>(9,9)</size>
 		<uiIconScale>0.85</uiIconScale>
 		
 		<vehicleCategory>Transport</vehicleCategory>
@@ -35,10 +34,8 @@
 			<ArmorRating_Heat>2.0</ArmorRating_Heat>
 			<Flammability>0</Flammability>
 			<MarketValue>1535</MarketValue>
-			<MechBandwidth>10</MechBandwidth>
-			<MechControlGroups>3</MechControlGroups>
-			<BandwidthCost>8</BandwidthCost>
-			<ControlTakingTime>5</ControlTakingTime>
+		<BandwidthCost>8</BandwidthCost>
+		<ControlTakingTime>5</ControlTakingTime>
 		</statBases>
 		
 		<vehicleStats>
@@ -48,15 +45,8 @@
 			<RepairRate>1</RepairRate>
 			<FlightSpeed>190</FlightSpeed>
 		</vehicleStats>
-
-		<soundSustainersOnEvent>
-			<li>
-				<start>IgnitionOn</start>
-				<stop>IgnitionOff</stop>
-				<value>CVN_Mechjets</value>
-			</li>
-		</soundSustainersOnEvent>
-
+		
+		
 		<race>
 			<baseBodySize>1.5</baseBodySize>
 		</race>
@@ -70,29 +60,12 @@
 				<li>
 					<key>passenger</key>
 					<label>Passenger</label>
-					<slots>20</slots>
+					<slots>6</slots>
 					
 					<hitbox>
 						<side>Body</side>
 					</hitbox>
-					<pawnRenderer>
-						<layerNorth>2</layerNorth>
-						<layerSouth>1</layerSouth>
-						<layerEast>-1</layerEast>
-						<layerWest>1</layerWest>
-
-						
-						<angleNorthEast>0</angleNorthEast>
-						<angleSouthEast>0</angleSouthEast>
-						<northEast>East</northEast>
-						<southEast>East</southEast>
-						<southWest>West</southWest>
-						<northWest>West</northWest>
-						
-						<drawOffsetNorth>(-0.7, 0, 2)</drawOffsetNorth>
-						<drawOffsetSouth>(0.7, 0, 2)</drawOffsetSouth>
-						<drawOffsetEast>(0.5, 0, 2)</drawOffsetEast>
-					</pawnRenderer>
+					
 				</li>
 			</roles>
 		</properties>
@@ -223,30 +196,9 @@
 		</components>
 		
 		<comps>	
-		
-		<li Class="taranchuk_nomadcrafting.CompProperties_NomadCrafting">
-			<craftingSpeed>2</craftingSpeed>
-			<recipes>
-				<li>CVN_ResurrectLightMech</li>
-				<li>Make_ComponentIndustrial</li>
-				<li>Make_ChemfuelFromOrganics</li>
-			</recipes>
-			<mechClassesToGestate>
-				<li>Light</li>
-				<li>Medium</li>
-				<li>Heavy</li>
-			</mechClassesToGestate>
-			<pullRecipesFrom>
-				<li>FabricationBench</li>
-				<li>TableMachining</li>
-			</pullRecipesFrom>
-			<qualityRange>
-				<li>Excellent</li>
-				<li>Masterwork</li>
-			</qualityRange>
-			<countOfBillsProcessed>3</countOfBillsProcessed>
-		</li>
-		
+      <li Class="CompProperties_Effecter">
+        <effecterDef>Scourging_Effect</effecterDef>
+      </li>
 		<li Class="taranchuk_flightcombat.CompProperties_FlightMode">
 			<flightCommands>
 				<flightMode>
@@ -254,31 +206,25 @@
 					<description>Toggle flight mode.</description>
 					<texPath>UI/Abilities/Waterskip</texPath>
 				</flightMode>
-				<!-- WIP feature. Didn't manage to achieve fully autonomous landing, but maybe can be finished later
-				<landOnGround>
-					<label>Land on ground</label>
-					<description>Designate a landing plan. Select an endpoint of the runway and a starting point for landing.</description>
-					<texPath>UI/Abilities/Waterskip</texPath>
-				</landOnGround> -->
 				<hoverMode>
 					<label>Hover mode</label>
 					<description>Toggle hover mode.</description>
-					<texPath>Gizmo/Liftoff_Icon</texPath>
+					<texPath>UI/Abilities/Waterskip</texPath>
 				</hoverMode>
 				<faceTarget>
 					<label>Face target (hover)</label>
 					<description>Face target while hovering.</description>
-					<texPath>Gizmo/FaceTarget_Icon</texPath>
+					<texPath>UI/Abilities/Waterskip</texPath>
 				</faceTarget>
 				<cancelFaceTarget>
 					<label>Cancel face target</label>
 					<description>Cancel face target.</description>
-					<texPath>Gizmo/FaceTargetStop_Icon</texPath>
+					<texPath>UI/Abilities/Waterskip</texPath>
 				</cancelFaceTarget>
 				<chaseTarget>
 					<label>Chase target (flight)</label>
 					<description>Chase target while flying.</description>
-					<texPath>Gizmo/ChaseTarger_Icon</texPath>
+					<texPath>UI/Abilities/Waterskip</texPath>
 				</chaseTarget>
 			</flightCommands>
 			<bombOptions>
@@ -289,7 +235,7 @@
 						<Steel>10</Steel>
 						<Chemfuel>20</Chemfuel>
 					</costList>
-					<projectile>CVN_BombHighExplosive</projectile>
+					<projectile>CVN_ShockBomb</projectile>
 					<cooldownTicks>60</cooldownTicks>
 				</li>
 				<li>
@@ -309,20 +255,20 @@
 			<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick>
 			<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
 			<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
-			<takeoffTicks>300</takeoffTicks>
-			<landingTicks>300</landingTicks>
+			<takeoffTicks>120</takeoffTicks>
+			<landingTicks>120</landingTicks>
 			<moveWhileTakingOff>true</moveWhileTakingOff>
 			<runwayTerrainRequirements>
 				<li>Medium</li>
 				<li>Heavy</li>
 			</runwayTerrainRequirements>
 			<flightGraphicData>
-				<texPath>Things/Vehicles/Mechtek/Mechtek</texPath>
+				<texPath>Things/Vehicles/VoidDragon/Dragon_flying</texPath>
 				<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 				<shaderType>CutoutComplexPattern</shaderType>
-				<drawSize>(11,11)</drawSize>
+				<drawSize>(18,18)</drawSize>
 				<drawRotated>true</drawRotated>
-				<color>(155, 155, 155)</color>
+				<color>(255, 255, 255)</color>
 			</flightGraphicData>
 			<flightFlecks>
 				<li>
@@ -393,28 +339,25 @@
 			</landingFlecks>
 			<waypointFleck>CVN_WaypointMech7</waypointFleck>
 			<AISettings>
-				<!--
 				<bomberSettings>
 					<npcStock>
-						<Steel>100</Steel>
-						<Chemfuel>200</Chemfuel>
+						<Steel>900</Steel>
+						<Chemfuel>900</Chemfuel>
 					</npcStock>
-					<maxBombRun>1</maxBombRun>
+					<maxBombRun>9</maxBombRun>
 					<blacklistedBombs>
 						<li>CVN_BombIncendiary</li>
 					</blacklistedBombs>
 					<distanceFromTarget>5</distanceFromTarget>
-				</bomberSettings>-->
+				</bomberSettings>
 				<gunshipSettings>
 					<npcStock>
 						<CVNAmmoMissile>60~120</CVNAmmoMissile>
 					</npcStock>
-					<gunshipMode>Hovering</gunshipMode>
+					<gunshipMode>Chasing</gunshipMode>
 					<distanceFromTarget>30</distanceFromTarget>
 				</gunshipSettings>
 			</AISettings>
-			
-			<damageMultiplierFromNonAntiAirProjectiles>0.3</damageMultiplierFromNonAntiAirProjectiles>
 		</li>
 		<li Class="taranchuk_flightcombat.CompProperties_PawnDeployment">
 			<pickupAreaSize>(10, 5)</pickupAreaSize>
@@ -431,26 +374,26 @@
 			<takePawnsOfAnyFaction>false</takePawnsOfAnyFaction>
 			<maxPawnMass>100</maxPawnMass>
 		</li>
+		
       <li Class="VehicleMechanitorControl.CompProperties_MechanitorControl">
 		<bandwidthGain>0</bandwidthGain>
 		<mechControlRange>0</mechControlRange>
-		<canBeMechanitor>true</canBeMechanitor>
       </li>
 	  <li Class="taranchuk_vehicleabilities.CompProperties_Abilities">
 		<abilities>
 			<li>LongjumpMech</li>
-			<li>CVN_ControlMech</li>
-			<li>CVN_RepairMech</li>
-			<li>CVN_DisassembleMech</li>
-			<li>CVN_DisconnectMech</li>
-			<li>CVN_Ripscan</li>
-			<li>DoDeconstruct</li>
 		</abilities>
 	  </li>
+		
+      <li Class="VehicleMechanitorControl.CompProperties_MechanitorControl">
+		<bandwidthGain>0</bandwidthGain>
+		<mechControlRange>0</mechControlRange>
+      </li>
+      <li Class="CompProperties_OverseerSubject"></li>
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
-						<turretDef>mech7mis</turretDef>
+						<turretDef>fuckgun</turretDef>
 						
 						<renderProperties>
 							<north>(1, 3.5)</north>
@@ -458,6 +401,7 @@
 							<east>(3.5, 0.1)</east>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(330,10)</angleRestricted>
 						<gizmoLabel>Heavy Lasgun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
@@ -465,7 +409,7 @@
 						<key>lasgun2</key>
 					</li>
 					<li>
-						<turretDef>mech7mis</turretDef>
+						<turretDef>fuckgun</turretDef>
 						
 						<renderProperties>
 							<north>(-1, 3.5)</north>
@@ -473,48 +417,19 @@
 							<east>(3.5, -1.2)</east>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(350,30)</angleRestricted>
 						<gizmoLabel>Heavy Lasgun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
 						<key>lasgun1</key>
 					</li>
-					<li>
-						<turretDef>mech7mis</turretDef>
-						
-						<renderProperties>
-							<north>(5.4, 1)</north>
-							<south>(-5.4, -2.5)</south>
-							<east>(1.5, -5.7)</east>
-						</renderProperties>
-						<defaultAngleRotated>0</defaultAngleRotated>
-						<gizmoLabel>Heavy Boltor</gizmoLabel>
-						
-						<aimPieOffset>(0, 2.55)</aimPieOffset>
-						
-						<key>boltor2</key>
-					</li>
-					<li>
-						<turretDef>mech7mis</turretDef>
-						
-						<renderProperties>
-							<north>(-5.4, 1)</north>
-							<south>(5.4, -2.5)</south>
-							<east>(1.5, 3.4)</east>
-						</renderProperties>
-						<defaultAngleRotated>0</defaultAngleRotated>
-						<gizmoLabel>Heavy Boltor</gizmoLabel>
-						
-						<aimPieOffset>(0, 2.55)</aimPieOffset>
-						
-						<key>boltor1</key>
-					</li>
 				</turrets>
 			</li>
 			<li Class="Vehicles.CompProperties_VehicleLauncher">
 				<launchProtocol Class="Vehicles.PropellerTakeoff">
 					<launchProperties Class = "Vehicles.PropellerProtocolProperties">
-						<maxTicks>700</maxTicks>
+						<maxTicks>500</maxTicks>
 						<maxTicksVertical>300</maxTicksVertical>
 						<maxTicksPropeller>400</maxTicksPropeller>
 						<forcedRotation>East</forcedRotation>

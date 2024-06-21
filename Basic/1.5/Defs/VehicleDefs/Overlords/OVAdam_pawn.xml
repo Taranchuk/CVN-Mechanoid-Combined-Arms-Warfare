@@ -50,19 +50,6 @@
 			<FlightSpeed>190</FlightSpeed>
 		</vehicleStats>
 		
-		<soundOneShotsOnEvent>
-			<li>
-				<key>AerialVehicleLaunch</key>
-				<value>DropPod_Leaving</value>
-			</li>
-		</soundOneShotsOnEvent>
-		
-		<soundSustainersOnEvent>
-			<li>
-				<key>(AerialVehicleLanding, Spawned)</key>
-				<value>DropPod_Fall</value>
-			</li>
-		</soundSustainersOnEvent>
 		
 		<race>
 			<baseBodySize>1.5</baseBodySize>

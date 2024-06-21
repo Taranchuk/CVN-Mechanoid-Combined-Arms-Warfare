@@ -216,6 +216,9 @@
 		</components>
 
 		<comps>
+      <li Class="CompProperties_Effecter">
+        <effecterDef>Coffin_Effect</effecterDef>
+      </li>
         <li Class="VehicleMechanitorControl.CompProperties_MechanitorControl">
 		<bandwidthGain>0</bandwidthGain>
 		<mechControlRange>0</mechControlRange>
@@ -229,6 +232,35 @@
         <conditionDef>CVNFallout</conditionDef>
         <conditionDuration>99999999</conditionDuration>
     </li>
+<li Class="FarmVehicle.CompProperties_FarmVehicle">
+				<uiIcon>UI/Icons/Genes/Gene_Coagulate</uiIcon>
+				<harvestToggleIcon>UI/Icons/Genes/Gene_Coagulate</harvestToggleIcon>
+				<sowToggleIcon>UI/Icons/Genes/Gene_Coagulate</sowToggleIcon>
+				<interval>120</interval>
+				<plantCheckInterval>120</plantCheckInterval>
+				<plantYield>1.00</plantYield> <!-- plant yield multiplier-->
+				<terrainSet>
+					<li>
+						<targetTerrainDefs>
+							<li>Soil</li>
+							<li>MossyTerrain</li>
+						</targetTerrainDefs>
+						<replaceWith>SoilRich</replaceWith>
+					</li>
+				</terrainSet>
+				<plantableDef>
+					<li>Plant_Rice</li>
+					<li>Plant_Potato</li>
+					<li>Plant_Corn</li>
+					<li>Plant_Haygrass</li>
+					<li>Plant_Cotton</li>
+					<li>Plant_Devilstrand</li>
+					<li>Plant_Healroot</li>
+					<li>Plant_Hops</li>
+					<li>Plant_Smokeleaf</li>
+					<li>Plant_Psychoid</li>
+				</plantableDef>
+</li>
 
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 			</li>

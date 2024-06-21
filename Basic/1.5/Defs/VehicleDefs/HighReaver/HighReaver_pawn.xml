@@ -196,6 +196,13 @@
 		</components>
 		
 		<comps>	
+			<li Class="Vehicles.CompProperties_FueledTravel">
+				<fuelType>Chemfuel</fuelType>
+				<leakDef>Filth_Fuel</leakDef>
+				<fuelConsumptionRate>14.5</fuelConsumptionRate>
+				<fuelCapacity>50</fuelCapacity>
+				<fuelConsumptionWorldMultiplier>0.8</fuelConsumptionWorldMultiplier>
+			</li>
 		<li Class="taranchuk_flightcombat.CompProperties_FlightMode">
 			<flightCommands>
 				<flightMode>

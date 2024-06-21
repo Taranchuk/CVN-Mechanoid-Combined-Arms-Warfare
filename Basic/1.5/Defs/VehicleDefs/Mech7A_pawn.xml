@@ -2,15 +2,15 @@
 
 <Defs>
 	<Vehicles.VehicleDef ParentName="BaseVehiclePawn">
-		<defName>Mechtek</defName>
-		<label>Mech-7</label>
+		<defName>SpiritDS</defName>
+		<label>Spirit</label>
 		<description>The Mech-7 is a dropship designed to force it's way through high fire zones using it's quick charging high shield to protect the troops it deploys from artillery fire, capable of holding 20 units.\n\nThis unit's charge autocannon runs on low energy canisters, while it requires fresh missile hulls for it's shock missiles</description>
 	
 		<graphicData>
-			<texPath>Things/Vehicles/Mechtek/Mechtek</texPath>
+			<texPath>Things/Vehicles/SpiritDS</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
-			<drawSize>(9,9)</drawSize>
+			<drawSize>(12,20)</drawSize>
 			<drawRotated>true</drawRotated>
 			<color>(155, 155, 155)</color>
 		</graphicData>
@@ -20,9 +20,9 @@
 		<combatPower>300</combatPower>
 		<nameable>false</nameable>
 
-		<buildDef>CVNMechtek</buildDef>
+		<buildDef>CVNSpiritDS</buildDef>
 
-		<size>(4,8)</size>
+		<size>(9,9)</size>
 		<uiIconScale>0.85</uiIconScale>
 		
 		<vehicleCategory>Transport</vehicleCategory>
@@ -263,22 +263,22 @@
 				<hoverMode>
 					<label>Hover mode</label>
 					<description>Toggle hover mode.</description>
-					<texPath>Gizmo/Liftoff_Icon</texPath>
+					<texPath>UI/Abilities/Waterskip</texPath>
 				</hoverMode>
 				<faceTarget>
 					<label>Face target (hover)</label>
 					<description>Face target while hovering.</description>
-					<texPath>Gizmo/FaceTarget_Icon</texPath>
+					<texPath>UI/Abilities/Waterskip</texPath>
 				</faceTarget>
 				<cancelFaceTarget>
 					<label>Cancel face target</label>
 					<description>Cancel face target.</description>
-					<texPath>Gizmo/FaceTargetStop_Icon</texPath>
+					<texPath>UI/Abilities/Waterskip</texPath>
 				</cancelFaceTarget>
 				<chaseTarget>
 					<label>Chase target (flight)</label>
 					<description>Chase target while flying.</description>
-					<texPath>Gizmo/ChaseTarger_Icon</texPath>
+					<texPath>UI/Abilities/Waterskip</texPath>
 				</chaseTarget>
 			</flightCommands>
 			<bombOptions>

@@ -12,7 +12,13 @@
         </graphicData>
 		<reachMaxRangeAlways>true</reachMaxRangeAlways>
         <projectile>
-            <damageDef>Cut</damageDef>
+	  <extraDamages>
+            <li>
+              <def>Stun</def>
+              <amount>100</amount>
+            </li>
+          </extraDamages>
+            <damageDef>DamageTest</damageDef>
             <speed>150</speed>
             <damageAmountBase>20</damageAmountBase>
             <armorPenetrationBase>2.6</armorPenetrationBase>

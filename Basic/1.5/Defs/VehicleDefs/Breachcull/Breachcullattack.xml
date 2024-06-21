@@ -54,7 +54,7 @@
 		<autoSnapTargeting>false</autoSnapTargeting>
 		<rotationSpeed>2.95</rotationSpeed>
 		
-		<projectileOffset>2.1</projectileOffset>
+		<projectileOffset>0.1</projectileOffset>
 		
 		<minRange>0</minRange>
 		<maxRange>3.9</maxRange>
