@@ -2,12 +2,12 @@
 
 <Defs>	
 	<Vehicles.VehicleDef ParentName="BaseVehiclePawn">
-		<defName>CVNMassculling</defName>
-		<label>Mass Cull</label>
+		<defName>CVNmasscircumcizor</defName>
+		<label>Mass Harvest</label>
 		<description>The Mass Cull is a large walker which uses short ranged scything attacks to cleave through enemy troops, the massive mech is somewhat fragile for it's size but quick and capable of carrying someone on it's shoulder, How Kind!.</description>
 		
 		<graphicData>
-			<texPath>Things/Vehicles/Masscull/hieromech</texPath>
+			<texPath>Things/Vehicles/Masscull/masscircumcizor</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<drawSize>(8, 8)</drawSize>
@@ -18,7 +18,7 @@
 
 		<fillPercent>0.2</fillPercent>
 		
-		<buildDef>CVNMassculling_build</buildDef>
+		<buildDef>CVNmasscircumcizor_build</buildDef>
 		
 		<size>(6, 6</size>
 		

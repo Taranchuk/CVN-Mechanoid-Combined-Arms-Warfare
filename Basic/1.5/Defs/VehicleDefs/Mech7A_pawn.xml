@@ -2,15 +2,15 @@
 
 <Defs>
 	<Vehicles.VehicleDef ParentName="BaseVehiclePawn">
-		<defName>Mechtek</defName>
-		<label>Mech-7</label>
+		<defName>SpiritDS</defName>
+		<label>Spirit</label>
 		<description>The Mech-7 is a dropship designed to force it's way through high fire zones using it's quick charging high shield to protect the troops it deploys from artillery fire, capable of holding 20 units.\n\nThis unit's charge autocannon runs on low energy canisters, while it requires fresh missile hulls for it's shock missiles</description>
 	
 		<graphicData>
-			<texPath>Things/Vehicles/Mechtek/Mechtek</texPath>
+			<texPath>Things/Vehicles/SpiritDS</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
-			<drawSize>(9,9)</drawSize>
+			<drawSize>(12,20)</drawSize>
 			<drawRotated>true</drawRotated>
 			<color>(155, 155, 155)</color>
 		</graphicData>
@@ -20,9 +20,9 @@
 		<combatPower>300</combatPower>
 		<nameable>false</nameable>
 
-		<buildDef>CVNMechtek</buildDef>
+		<buildDef>CVNSpiritDS</buildDef>
 
-		<size>(4,8)</size>
+		<size>(9,9)</size>
 		<uiIconScale>0.85</uiIconScale>
 		
 		<vehicleCategory>Transport</vehicleCategory>
@@ -263,22 +263,22 @@
 				<hoverMode>
 					<label>Hover mode</label>
 					<description>Toggle hover mode.</description>
-					<texPath>Gizmo/Liftoff_Icon</texPath>
+					<texPath>UI/Abilities/Waterskip</texPath>
 				</hoverMode>
 				<faceTarget>
 					<label>Face target (hover)</label>
 					<description>Face target while hovering.</description>
-					<texPath>Gizmo/FaceTarget_Icon</texPath>
+					<texPath>UI/Abilities/Waterskip</texPath>
 				</faceTarget>
 				<cancelFaceTarget>
 					<label>Cancel face target</label>
 					<description>Cancel face target.</description>
-					<texPath>Gizmo/FaceTargetStop_Icon</texPath>
+					<texPath>UI/Abilities/Waterskip</texPath>
 				</cancelFaceTarget>
 				<chaseTarget>
 					<label>Chase target (flight)</label>
 					<description>Chase target while flying.</description>
-					<texPath>Gizmo/ChaseTarger_Icon</texPath>
+					<texPath>UI/Abilities/Waterskip</texPath>
 				</chaseTarget>
 			</flightCommands>
 			<bombOptions>
@@ -447,96 +447,6 @@
 			<li>DoDeconstruct</li>
 		</abilities>
 	  </li>
-	  
-	  <li Class="taranchuk_mechanicalarms.CompProperties_MechanicalArms">
-		<arms>
-			<li>
-				<position>(-2, 0, 2)</position>
-				<segments>
-					<li>
-						<defaultAngle>60</defaultAngle>
-						<maxSwingAngle>15</maxSwingAngle>
-						<swingPerTick>0.5</swingPerTick>
-						<offset>(0, -0.01, 0)</offset>
-						<graphicData>
-							<graphicClass>Graphic_Single</graphicClass>
-							<texPath>Things/Vehicles/Hive Shaper/arm1</texPath>
-							<drawSize>(1,1)</drawSize>
-							<shaderType>CutoutComplex</shaderType>
-						</graphicData>
-					</li>
-					<li>
-						<defaultAngle>0</defaultAngle>
-						<maxSwingAngle>30</maxSwingAngle>
-						<swingPerTick>0.5</swingPerTick>
-						<offset>(-0.2, -0.02, 0.5)</offset>
-						<graphicData>
-							<graphicClass>Graphic_Single</graphicClass>
-							<texPath>Things/Vehicles/Hive Shaper/arm2</texPath>
-							<drawSize>(1,1)</drawSize>
-							<shaderType>CutoutComplex</shaderType>
-						</graphicData>
-					</li>
-					<li>
-						<defaultAngle>300</defaultAngle>
-						<maxSwingAngle>50</maxSwingAngle>
-						<swingPerTick>0.5</swingPerTick>
-						<offset>(-0.2, -0.03, 0.5)</offset>
-						<graphicData>
-							<graphicClass>Graphic_Single</graphicClass>
-							<texPath>Things/Vehicles/Hive Shaper/arm3</texPath>
-							<drawSize>(1,1)</drawSize>
-							<shaderType>CutoutComplex</shaderType>
-						</graphicData>
-					</li>
-				</segments>
-			</li>
-			<!--
-			<li>
-				<position>(-1, 0, 2.2)</position>
-				<segments>
-					<li>
-						<defaultAngle>90</defaultAngle>
-						<maxSwingAngle>15</maxSwingAngle>
-						<swingPerTick>0</swingPerTick>
-						<offset>(0, -0.01, 0)</offset>
-						<graphicData>
-							<graphicClass>Graphic_Single</graphicClass>
-							<texPath>Things/Vehicles/Hive Shaper/arm1</texPath>
-							<drawSize>(1,1)</drawSize>
-							<shaderType>CutoutComplex</shaderType>
-						</graphicData>
-					</li>
-					<li>
-						<defaultAngle>0</defaultAngle>
-						<maxSwingAngle>15</maxSwingAngle>
-						<swingPerTick>0.3</swingPerTick>
-						<offset>(-0.2, -0.02, 0.5)</offset>
-						<graphicData>
-							<graphicClass>Graphic_Single</graphicClass>
-							<texPath>Things/Vehicles/Hive Shaper/arm2</texPath>
-							<drawSize>(1,1)</drawSize>
-							<shaderType>CutoutComplex</shaderType>
-						</graphicData>
-					</li>
-					<li>
-						<offset>(-0.2, -0.03, 0.5)</offset>
-						<defaultAngle>-60</defaultAngle>
-						<maxSwingAngle>15</maxSwingAngle>
-						<swingPerTick>0</swingPerTick>
-						<graphicData>
-							<graphicClass>Graphic_Single</graphicClass>
-							<texPath>Things/Vehicles/Hive Shaper/arm3</texPath>
-							<drawSize>(1,1)</drawSize>
-							<shaderType>CutoutComplex</shaderType>
-						</graphicData>
-					</li>
-				</segments>
-			</li>
-			-->
-		</arms>
-	  </li>
-	  <!--
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
@@ -601,7 +511,6 @@
 					</li>
 				</turrets>
 			</li>
-			-->
 			<li Class="Vehicles.CompProperties_VehicleLauncher">
 				<launchProtocol Class="Vehicles.PropellerTakeoff">
 					<launchProperties Class = "Vehicles.PropellerProtocolProperties">
@@ -1127,13 +1036,6 @@
 					</landingProperties>
 				</launchProtocol>
 			</li>
-			<li Class="Vehicles.CompProperties_FueledTravel">
-                <fuelType>Chemfuel</fuelType>
-                <leakDef>Filth_Fuel</leakDef>
-                <fuelConsumptionRate>14.5</fuelConsumptionRate>
-                <fuelCapacity>50</fuelCapacity>
-                <fuelConsumptionWorldMultiplier>0.8</fuelConsumptionWorldMultiplier>
-            </li>
 		</comps>
 	</Vehicles.VehicleDef>
 </Defs>

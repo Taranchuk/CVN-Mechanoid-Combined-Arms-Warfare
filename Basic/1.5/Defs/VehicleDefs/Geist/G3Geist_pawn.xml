@@ -47,19 +47,6 @@
 			<FlightSpeed>190</FlightSpeed>
 		</vehicleStats>
 		
-		<soundOneShotsOnEvent>
-			<li>
-				<key>AerialVehicleLaunch</key>
-				<value>DropPod_Leaving</value>
-			</li>
-		</soundOneShotsOnEvent>
-		
-		<soundSustainersOnEvent>
-			<li>
-				<key>(AerialVehicleLanding, Spawned)</key>
-				<value>DropPod_Fall</value>
-			</li>
-		</soundSustainersOnEvent>
 		
 		<race>
 			<baseBodySize>1.5</baseBodySize>
@@ -74,7 +61,7 @@
 				<li>
 					<key>passenger</key>
 					<label>Passenger</label>
-					<slots>20</slots>
+					<slots>6</slots>
 					
 					<hitbox>
 						<side>Body</side>
@@ -266,8 +253,8 @@
 			<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick>
 			<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
 			<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
-			<takeoffTicks>300</takeoffTicks>
-			<landingTicks>300</landingTicks>
+			<takeoffTicks>120</takeoffTicks>
+			<landingTicks>120</landingTicks>
 			<moveWhileTakingOff>true</moveWhileTakingOff>
 			<runwayTerrainRequirements>
 				<li>Medium</li>

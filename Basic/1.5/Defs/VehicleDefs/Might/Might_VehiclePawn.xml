@@ -442,49 +442,129 @@
 						<turretDef>mightaacannon</turretDef>
 						
 						<renderProperties>
-							<north>(0, 3.55)</north>
+							<north>(-2, 6)</north>
 							<south>(0, -3)</south>
 							<east>(3.525, 0.625)</east>
 						</renderProperties>
 						
-						<gizmoLabel>Main Turret</gizmoLabel>
+						<gizmoLabel>Left Anti Air</gizmoLabel>
 						
 						<angleRestricted/>
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
-						<key>mainTurret</key>
+						<key>Lantiair</key>
+					</li>
+					<li>
+						<turretDef>mightaacannon</turretDef>
+						
+						<renderProperties>
+							<north>(2, 6)</north>
+							<south>(0, -3)</south>
+							<east>(3.525, 0.625)</east>
+						</renderProperties>
+						
+						<gizmoLabel>Right Anti Air</gizmoLabel>
+						
+						<angleRestricted/>
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>Rantiair</key>
+					</li>
+					<li>
+						<turretDef>mightantiinfantry</turretDef>
+						
+						<renderProperties>
+							<north>(-3, 7)</north>
+							<south>(0, -3)</south>
+							<east>(3.525, 0.625)</east>
+						</renderProperties>
+						
+						<gizmoLabel>Left Ripper</gizmoLabel>
+						
+						<angleRestricted/>
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>LRipper</key>
+					</li>
+					<li>
+						<turretDef>mightantiinfantry</turretDef>
+						
+						<renderProperties>
+							<north>(3, 7)</north>
+							<south>(0, -3)</south>
+							<east>(3.525, 0.625)</east>
+						</renderProperties>
+						
+						<gizmoLabel>Right Ripper</gizmoLabel>
+						
+						<angleRestricted/>
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>RRipper</key>
 					</li>
 					<li>
 						<turretDef>fuckgun</turretDef>
 						
 						<renderProperties>
-							<north>(3, 2.55)</north>
+							<north>(-5, 8)</north>
 							<south>(3, -4.55)</south>
 							<east>(5.05, -2.45)</east>
 						</renderProperties>
 						
-						<gizmoLabel>autocannon2</gizmoLabel>
+						<gizmoLabel>Left AutoCannon</gizmoLabel>
 						
 						<angleRestricted/>
 						<aimPieOffset>(0, 0.65)</aimPieOffset>
 						
-						<key>autocannon2</key>
+						<key>ACFL</key>
 					</li>
 					<li>
 						<turretDef>fuckgun</turretDef>
 						
 						<renderProperties>
-							<north>(-3, 2.55)</north>
-							<south>(-3, -4.55)</south>
-							<east>(5.05, 2.45)</east>
+							<north>(5, 8)</north>
+							<south>(3, -4.55)</south>
+							<east>(5.05, -2.45)</east>
 						</renderProperties>
 						
-						<gizmoLabel>Autocannon1</gizmoLabel>
+						<gizmoLabel>Right Autocannon</gizmoLabel>
 						
 						<angleRestricted/>
 						<aimPieOffset>(0, 0.65)</aimPieOffset>
 						
-						<key>Autocannon1</key>
+						<key>ACFR</key>
+					</li>
+					<li>
+						<turretDef>fuckgun</turretDef>
+						
+						<renderProperties>
+							<north>(-3, 3)</north>
+							<south>(-3, -4.55)</south>
+							<east>(5.05, 2.45)</east>
+						</renderProperties>
+						
+						<gizmoLabel>Left Autocannon</gizmoLabel>
+						
+						<angleRestricted/>
+						<aimPieOffset>(0, 0.65)</aimPieOffset>
+						
+						<key>ACBL</key>
+					</li>
+					<li>
+						<turretDef>fuckgun</turretDef>
+						
+						<renderProperties>
+							<north>(3, 3)</north>
+							<south>(-3, -4.55)</south>
+							<east>(5.05, 2.45)</east>
+						</renderProperties>
+						
+						<gizmoLabel>Right Autocannon</gizmoLabel>
+						
+						<angleRestricted/>
+						<aimPieOffset>(0, 0.65)</aimPieOffset>
+						
+						<key>ACNR</key>
 					</li>
 					<li>
 						<turretDef>mightmissilelaun</turretDef>

@@ -13,8 +13,8 @@
 		</graphicData>
 		
 		<projectile>
-			<damageDef>Thump</damageDef>
-			<damageAmountBase>5</damageAmountBase>
+			<damageDef>Bomb</damageDef>
+			<damageAmountBase>10</damageAmountBase>
 			<explosionRadius>1.1</explosionRadius>
 			<speed>360</speed>
 			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
@@ -50,7 +50,7 @@
 		<projectileOffset>2.1</projectileOffset>
 		
 		<minRange>0</minRange>
-		<maxRange>32.9</maxRange>
+		<maxRange>122.9</maxRange>
 		
 		<fireModes>
 			<li>
@@ -64,7 +64,57 @@
 		</fireModes>
 
 		<graphicData>
-			<texPath>Things/Vehicles/Might/Tier2_Tank_CannonTop</texPath>
+			<texPath>Things/Vehicles/Might/MechChargeCannonTurret_Top</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(2, 2)</drawSize>
+		</graphicData>
+		
+		<ammunition>
+			<thingDefs>
+				<li>CVNAmmoBluestandard</li>
+			</thingDefs>
+		</ammunition>
+	</Vehicles.VehicleTurretDef>
+
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>mightantiinfantry</defName>
+		<label>Anti Air Cannons</label>
+		<description>S</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>Shot_Autocannon</shotSound>
+		
+		<projectile>mightantiair</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.4</warmUpTimer>
+		
+		<magazineCapacity>60</magazineCapacity>
+		<genericAmmo>true</genericAmmo>
+		
+		<hitFlags>IntendedTarget</hitFlags>
+		
+		<autoSnapTargeting>false</autoSnapTargeting>
+		<rotationSpeed>2.95</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset>
+		
+		<minRange>0</minRange>
+		<maxRange>122.9</maxRange>
+		
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>3</ticksBetweenShots>
+				<ticksBetweenBursts>3</ticksBetweenBursts>
+				<label>Ripper</label>
+				<spreadRadius>9</spreadRadius>
+				<texPath>UI/Gizmos/FireRate_Single</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>Things/Vehicles/Might/MechChaingunTurret_Topprimary</texPath>
 			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<drawSize>(2, 2)</drawSize>

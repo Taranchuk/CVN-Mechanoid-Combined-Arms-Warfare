@@ -2,13 +2,13 @@
 
 <Defs>
 	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
-		<defName>CVNMassculling_build</defName>
-		<label>Mass Cull</label>
+		<defName>CVNmasscircumcizor_build</defName>
+		<label>Mass Harvest</label>
 		<description>The Mass Cull is a large walker which uses short ranged scything attacks to cleave through enemy troops, the massive mech is somewhat fragile for it's size but quick and capable of carrying someone on it's shoulder, How Kind!.</description>
 			<designationCategory>Biotech</designationCategory>
 		
 		<graphicData>
-			<texPath>Things/Vehicles/Masscull/hieromech</texPath>
+			<texPath>Things/Vehicles/Masscull/masscircumcizor</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(6, 6)</drawSize>
 		</graphicData>
@@ -33,13 +33,8 @@
 		
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 		
-		<thingToSpawn>CVNMassculling</thingToSpawn>
+		<thingToSpawn>CVNmasscircumcizor</thingToSpawn>
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
-
-  <DesignatorDropdownGroupDef>
-    <defName>MassCullDroppy</defName>
-    <label>fine tile</label>
-  </DesignatorDropdownGroupDef>
 </Defs>
